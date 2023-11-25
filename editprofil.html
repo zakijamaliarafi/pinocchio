@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="editprofilstyle.css">
+</head>
+
+<body>
+    <form>
+    <div class="container">
+        <div class="gradient-background"></div>
+        <img class="image1" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\image 2.png" />
+        <div class="profile-background"></div>
+        <img class="image2" src="C:\Users\rafia\Downloads\kayu kecil.png" />
+        <div class="overlay-container">
+            <div class="overlay-item">
+                <input type="text" class="input-username" value="">
+            </div>
+            <div class="overlay-item" style="top:203px;">
+                <input type="text" class="input-fullname" value="">
+            </div>
+            <div class="overlay-item" style="top: 101px">
+                <input type="textbox" class="input-bio" value="">
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="input-box" style="top: 0px;">Username </div>
+            <div class="input-box" style="top: 203px;">Bio </div>
+            <div class="input-box" style="top: 101px;">Full Name</div>
+        </div>
+        <div class="button1" onclick="showEditProfileSuccessPopup()">
+            <div class="button1-inner"></div>
+            <div class="button1-text">Save</div>
+        </div>
+        <div class="button2" onclick="window.location.href='profil.html'">
+            <div class="button2-inner"></div>
+            <div class="button2-text">Cancel</div>
+        </div>
+        <div class="profile-title">Edit <span style="color: #FDB50A;">Profile</span></div>
+    </div>
+    </form>
+
+    <div id="logoutPopup" class="logout-popup" style="display: none;">
+        <div class="popup-content">
+            Yakin untuk logout?
+            <div class="popup-buttons">
+                <div class="popup-button popup-button-yes" onclick="logout()">YA</div>
+                <div class="popup-button popup-button-no" onclick="hideLogoutPopup()">TIDAK</div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Profile Success Popup -->
+    <div id="editProfileSuccessPopup" class="popup-container">
+        <div class="popup-content">
+            <div class="popup-message">Edit Profil Berhasil!</div>
+            <div class="popup-button" onclick="hideEditProfileSuccessPopup()">
+                <div class="popup-button-text" onclick="window.location.href='profil.html'">OK</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showEditProfileSuccessPopup() {
+            document.getElementById('editProfileSuccessPopup').style.display = 'flex';
+        }
+
+        function hideEditProfileSuccessPopup() {
+            document.getElementById('editProfileSuccessPopup').style.display = 'none';
+        }
+
+        function showLogoutPopup() {
+            // Implement your logout logic or pop-up display here
+        }
+    </script>
+</body>
+
+</html>

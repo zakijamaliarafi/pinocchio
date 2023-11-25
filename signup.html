@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="signupstyle.css">
 </head>
 
 <body>
@@ -18,10 +18,9 @@
         <img class="image image2" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio\pinocchio.png" />
         <img class="image image3" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio\image 24.png" />
         <div class="red-box"></div>
-        
-        <div class="signup-section">
-            <div class="signup-text">Belum punya akun?</div>
-            <div class="signup-link" onclick="window.location.href='signup.html'">sign up</div>
+        <div class="login-section">
+            <div class="login-text">sudah punya akun?</div>
+            <div class="login-link" onclick="window.location.href='login.html'">login</div>
         </div>
         <div class="input-box-username">
             <input type="text" class="input-field username" value="">
@@ -29,41 +28,43 @@
         <div class="input-box-password">
             <input type="text" class="input-field password" value="">
         </div>
+        <div class="input-box-confirm-password">
+            <input type="text" class="input-field confirm-password" value="">
+        </div>
         <div class="section">
             <div class="field username">Username</div>
             <div class="field password">Password</div>
+            <div class="field confirm-password">Confirm Password</div>
         </div>
         <div class="signup-button">
             <div class="signup-button-inner">
-                <div><input type="submit" class="signup-button-text" onclick="showLoginFail(event)" value="LOG IN"></div>
+                <div><input type="submit" class="signup-button-text" onclick="showRegistrationSuccess(event)" value="SIGN UP"></div>
             </div>
         </div>
         <div class="looking-for-text">
-            <div class="looking-for-text-inner">Welcome <span class="everyone-text">Everyone</span></div>
+            <div class="looking-for-text-inner">Looking for <span class="new-member-text">New</span> Member</div>
         </div>
         <img class="image4" onclick="window.location.href='homepage.html'" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\back kayu.png" />
     </div>
     </form>
 
-    <!-- Registration Fail Popup -->
-    <div class="login-fail" style="display: none;">
-        <div class="title">Login Gagal</div>
-        <div class="subtitle">Username/Password yang anda masukkan salah</div>
+    <!-- Registration Success Popup -->
+    <div class="registration-success" style="display: none;">
+        <div class="title">Registrasi Berhasil</div>
+        <div class="subtitle">Silahkan Login</div>
         <div class="button-container" onclick="window.location.href='login.html'">
-            <div class="button" onclick="hideLoginFail()">OK</div>
+            <div class="button" onclick="hideRegistrationSuccess()">OK</div>
         </div>
-        <img style="width: 62px; height: 62px; left: 160px; top: 45px; position: absolute" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\peringatan.png" />
     </div>
 
-
     <script>
-        function showLoginFail(event) {
+        function showRegistrationSuccess(event) {
             event.preventDefault(); // Menghentikan perilaku bawaan formulir
-            document.querySelector('.login-fail').style.display = 'flex';
+            document.querySelector('.registration-success').style.display = 'flex';
         }
 
-        function hideLoginFail() {
-            document.querySelector('.login-fail').style.display = 'none';
+        function hideRegistrationSuccess() {
+            document.querySelector('.registration-success').style.display = 'none';
         }
     </script>
 </body>

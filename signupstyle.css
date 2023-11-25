@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600&family=Berkshire+Swash&family=Poppins:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #4A9FBC;
+}
+
+.background-overlay {
+    width: 2002px;
+    height: 1139px;
+    left: 1963px;
+    top: 1119px;
+    position: absolute;
+    transform: rotate(-180deg);
+    transform-origin: 0 0;
+    background: linear-gradient(359deg, rgba(64, 145, 176, 0.70) 0%, rgba(20, 58, 111, 0.70) 100%);
+}
+
+.image {
+    width: 187px;
+    height: 131px;
+    left: 416px;
+    top: 164px;
+    position: absolute;
+}
+
+.image1,
+.image2,
+.image3 {
+    position: absolute;
+    height: auto;
+}
+
+.image1 {
+    width: 187px;
+    height: 131px;
+    left: 416px;
+    top: 185px;
+    transform: scaleX(-1);
+}
+
+
+
+.image2 {
+    width: 385px;
+    height: 94px;
+    left: 767px;
+    top: 81px;
+}
+
+.image3 {
+    left: 1317px;
+    top: 165px;
+    transform: scaleX(-1);
+}
+
+.image4{
+    width: 165px; 
+    height: 74px; 
+    left:10px; 
+    top: 35px; 
+    position: absolute;  
+    transform-origin: 0 0;
+    cursor: pointer;
+}
+
+.red-box {
+    width: 1181px;
+    height: 554px;
+    left: 370px;
+    top: 292px;
+    position: absolute;
+    background: #B32231;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.login-section {
+    left: 832px;
+    top: 793px;
+    position: absolute;
+}
+
+.login-text {
+    left: 0;
+    top: 0;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.login-link {
+    left: 204px;
+    top: 0;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.section {
+    width: 375px;
+    height: 253px;
+    left: 510px;
+    top: 398px;
+    position: absolute;
+}
+
+.field {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    word-wrap: break-word;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.field.username {
+    top: 0;
+}
+
+.input-field.username{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    word-wrap: break-word;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 7px 20px 0 20px;
+    margin-bottom: 15px;
+}
+
+.input-field.password{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    word-wrap: break-word;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 7px 20px 0 20px;
+    margin-bottom: 15px;
+}
+
+.input-field.confirm-password{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    word-wrap: break-word;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 7px 20px 0 20px;
+    margin-bottom: 15px;
+}
+
+.field.password {
+    top: 101px;
+}
+
+.field.confirm-password {
+    top: 208px;
+}
+
+.signup-button {
+    width: 200px;
+    height: 60px;
+    left: 895px;
+    top: 687px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.signup-button-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #410304;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.signup-button-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 50px;
+    border-color: transparent;
+    cursor: pointer;
+    word-wrap: break-word;
+    background: transparent;
+}
+
+.looking-for-text {
+    width: 694px;
+    height: 75px;
+    left: 613px;
+    top: 257px;
+    position: absolute;
+    background: #410304;
+    border-radius: 10px;
+}
+
+.looking-for-text-inner {
+    padding-left: 35px;
+    position: relative;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.new-member-text {
+    color: #FDB50A;
+}
+
+/* CSS for Registration Success Popup */
+.registration-success {
+    width: 600px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2C7598;
+    border-radius: 20px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.registration-success .title {
+    width: 100%;
+    height: 51px;
+    top: -15px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-family: Poppins;
+    font-weight: 600;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+.registration-success .subtitle {
+    width: 100%;
+    height: auto;
+    top: -20px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: Poppins;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+
+.registration-success .button-container {
+    width: 80%;
+    height: auto;
+    padding: 16px;
+    box-sizing: border-box;
+    position: relative;
+    background: #B32231;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+
+.registration-success .button {
+    text-align: center;
+    color: #F9F9F9;
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 500;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.input-box-username{
+    width: 571px; 
+    height: 62px; 
+    left: 900px; 
+    top: 400px; 
+    position: absolute; 
+    background:white; 
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-box-password{
+    width: 571px; 
+    height: 62px; 
+    left: 900px; 
+    top: 500px; 
+    position: absolute; 
+    background:white; 
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-box-confirm-password{
+    width: 571px; 
+    height: 62px; 
+    left: 900px; 
+    top: 600px; 
+    position: absolute; 
+    background:white; 
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
