@@ -154,23 +154,27 @@ body {
 }
 
 .button1-inner {
-    width: 200px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     background: #4A9FBC;
+    cursor: pointer;
     border-radius: 50px;
-    border-color: transparent;
 }
 
 .button1-text {
-    left: 67px;
-    top: 11px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     color: white;
     font-size: 25px;
     font-family: Poppins;
     font-weight: 600;
+    border-radius: 50px;
+    border-color: transparent;
+    cursor: pointer;
     word-wrap: break-word;
+    background: transparent;
 }
 
 .button2 {
