@@ -68,6 +68,13 @@ body {
     border-radius: 50px;
 }
 
+.overlay-item3 {
+    width: 610px;
+    height: 100px;
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+}
 .input-username {
     position: absolute;
     width: 100%;
@@ -103,7 +110,7 @@ body {
 .input-bio {
     position: absolute;
     width: 100%;
-    height: 45px;
+    height: 80px;
     color: black;
     font-size: 30px;
     font-weight: 600;
@@ -114,6 +121,7 @@ body {
     outline: none;
     padding: 5px 20px 0 20px;
     margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .input-container {
@@ -215,6 +223,7 @@ body {
     top: 50px;
     position: absolute;
     transform-origin: 0 0;
+    cursor: pointer;
 }
 
 .logout-popup {
