@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="editsoal.css" />
+    <title>Pinokio</title>
+  </head>
+  <body>
+    <nav class="container navbar">
+      <img src="pinokio/image 2.png" alt="Pinokio Logo" />
+      <div class="navbar-right">
+        <span onclick="window.location.href='loginpino.html'">HOME</span>
+        <span onclick="window.location.href='insert.html'">UJI</span>
+        <span onclick="window.location.href='aboutus.html'">ABOUT US</span>
+        <img src="pinokio/profil pino.png" onclick="window.location.href='profil.html'" style="cursor: pointer;" alt="Profile Pino" />
+      </div>
+    </nav>
+
+    <section class="container header">
+      <h2 class="headings-pinokio">Edit Quiz</h2>
+    </section>
+
+    <div class="container">
+      <section class="form-data">
+        <div>
+          <h3>1. Pertanyaan</h3>
+          <input type="text" />
+        </div>
+        <div>
+          <h3>2. Pilihan Jawaban</h3>
+          <div class="form-choice"><span>A.</span><input type="text" /></div>
+          <div class="form-choice"><span>B.</span><input type="text" /></div>
+          <div class="form-choice"><span>C.</span><input type="text" /></div>
+          <div class="form-choice"><span>D.</span><input type="text" /></div>
+        </div>
+        <div>
+          <h3>3. Jawaban</h3>
+          <input type="text" />
+        </div>
+        <div>
+          <h3>4. Tema</h3>
+          <select name="tema" id="tema">
+            <option value="kejujuran">Kejujuran</option>
+            <option value="tanggung-jawab">Tanggung Jawab</option>
+            <option value="tanggung-jawab">Kebaikan</option>
+          </select>
+        </div>
+        <div>
+          <h3>5. Petunjuk</h3>
+          <textarea
+            name="petunjuk"
+            id="petunjuk"
+            cols="75"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="button-action">
+          <button class="batal">BATAL</button>
+          <button class="insert">INSERT</button>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-top-first">
+            <p>
+              Menjelajahi Kebaikan, Kejujuran, dan Tanggung Jawab melalui Game
+              Kuis yang Mendidik
+            </p>
+            <div class="form">
+              <div>Kirim ke Email</div>
+              <div>
+                <input type="text" placeholder="masukkan saran..." />
+                <button>Kirim</button>
+              </div>
+            </div>
+          </div>
+          <div class="footer-top-second">
+          </div>
+          <div class="footer-top-third">
+            <div class="social-media">
+              <img src="pinokio/ig.png" alt="Instagram" />
+              <span>@pinocchio_official</span>
+            </div>
+            <div class="social-media">
+              <img src="pinokio/twt.png" alt="Twiter" />
+              <span>@pinocchio_official</span>
+            </div>
+            <div class="social-media">
+              <img src="pinokio/fb.png" alt="Facebook" />
+              <span>@pinocchio_official</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

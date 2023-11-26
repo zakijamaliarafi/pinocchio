@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b225f 0%, #2c7598 62.15%, #4a9fbc 100%);
+  color: #fff;
+}
+
+.headings-pinokio {
+  font-family: "Berkshire Swash", serif;
+  font-size: 100px;
+  margin-top: 100px;
+}
+
+.headings-pinokio-gradient {
+  font-family: "Berkshire Swash", serif;
+  background: linear-gradient(180deg, #f6d56e 0%, #e89f0f 59.9%, #b06c17 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  max-width: 1920px;
+  margin: auto;
+  padding: 24px 92px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navbar img[alt="Pinokio Logo"] {
+  flex: none;
+  width: 339px;
+  height: 83px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.navbar-right span{
+  padding: 5px 25px 5px 25px;
+  cursor: pointer;
+}
+
+.navbar-right span:hover {
+  background-color: #b32231;
+  color: white; /* Mengganti warna teks menjadi putih saat dihover */
+  border-radius: 50px; /* Menambahkan sudut lengkung untuk tampilan yang lebih baik */
+  padding: 5px 25px 5px 25px;
+}
+
+.form-data {
+  background-color: #0b225f;
+  padding: 64px 128px;
+  border-radius: 28px;
+  font-size: 30px;
+}
+
+.form-data input {
+  width: 100%;
+  padding: 16px;
+  background-color: #345075d9;
+  border-radius: 6px;
+  margin-left: 32px;
+  color: #fff;
+}
+
+.form-choice {
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: start;
+  margin-left: 32px;
+}
+
+textarea {
+  margin-left: 32px;
+  resize: none;
+  width: 100%;
+  padding: 16px;
+  background-color: #345075d9;
+  border-radius: 6px;
+  color: #fff;
+}
+
+select {
+  margin-left: 32px;
+  padding: 16px;
+  background-color: #345075d9;
+  border-radius: 6px;
+  color: #fff;
+}
+.footer {
+  background-color: #345075d9;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.footer-top .footer-top-first {
+  grid-column: span 3 / span 3;
+}
+
+.form {
+  margin-top: 32px;
+  display: flex;
+  align-items: start;
+  gap: 32px;
+}
+
+.form input {
+  background-color: #ffffffb2;
+  padding: 10px 20px;
+  border-radius: 99px;
+  font-size: 24px;
+  max-width: 300px;
+}
+
+.form button {
+  margin-top: 16px;
+  display: block;
+  background-color: #4a9fbc;
+  padding: 4px 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.footer-top-second div {
+  margin-bottom: 18px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.button-action {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.batal {
+  background-color: #b322315b;
+  padding: 4px 20px;
+  font-size: 24px;
+  color: #fff;
+  width: 30%;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.insert {
+  background-color: #2c75985b;
+  padding: 4px 20px;
+  font-size: 24px;
+  color: #fff;
+  width: 30%;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
