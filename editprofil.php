@@ -1,3 +1,12 @@
+<?php
+include "koneksi.php";
+session_start();
+
+$sql = "SELECT * from user WHERE id_user='$_SESSION[id]'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +18,7 @@
 </head>
 
 <body>
-    <form>
+    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
     <div class="container">
         <div class="gradient-background"></div>
         <img class="image1" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\image 2.png" />
@@ -17,13 +26,13 @@
         <img class="image2" src="C:\Users\rafia\Downloads\kayu kecil.png" />
         <div class="overlay-container">
             <div class="overlay-item">
-                <input type="text" class="edit-username" value="">
+                <input type="text" class="edit-username" name="username" value="<?php echo $row['username']; ?>">
             </div>
             <div class="overlay-item" style="top: 101px">
-                <input type="text" class="edit-fullname" value="">
+                <input type="text" class="edit-fullname" name="nama" value="<?php echo $row['nama']; ?>">
             </div>
             <div class="overlay-item3" style="top:203px;">
-                <textarea class="edit-bio" value=""></textarea>
+                <textarea class="edit-bio" name="bio"><?php echo $row['bio']; ?></textarea>
             </div>
         </div>
         <div class="input-container">
@@ -31,9 +40,10 @@
             <div class="input-box" style="top: 203px;">Bio </div>
             <div class="input-box" style="top: 101px;">Full Name</div>
         </div>
-        <div class="button1" onclick="showEditProfileSuccessPopup()">
-            <div><input type="submit" class="button1-inner" value=""></div>
-            <div class="button1-text">Save</div>
+        <div class="button1">
+            <div class="button1-inner">
+                <div><input type="submit" name="edit" class="button1-text" value="Save"></div>
+            </div>
         </div>
         <div class="button2" onclick="window.location.href='profil.php'">
             <div class="button2-inner"></div>
@@ -43,21 +53,12 @@
     </div>
     </form>
 
-    <div id="logoutPopup" class="logout-popup" style="display: none;">
-        <div class="popup-content">
-            Yakin untuk logout?
-            <div class="popup-buttons">
-                <div class="popup-button popup-button-yes" onclick="logout()">YA</div>
-                <div class="popup-button popup-button-no" onclick="hideLogoutPopup()">TIDAK</div>
-            </div>
-        </div>
-    </div>
     <!-- Edit Profile Success Popup -->
     <div id="editProfileSuccessPopup" class="popup-container">
         <div class="popup-content">
             <div class="popup-message">Edit Profil Berhasil!</div>
             <div class="popup-button" onclick="hideEditProfileSuccessPopup()">
-                <div class="popup-button-text" onclick="window.location.href='profil.php'">OK</div>
+                <div class="popup-button-text">OK</div>
             </div>
         </div>
     </div>
@@ -69,12 +70,24 @@
 
         function hideEditProfileSuccessPopup() {
             document.getElementById('editProfileSuccessPopup').style.display = 'none';
-        }
-
-        function showLogoutPopup() {
-            // Implement your logout logic or pop-up display here
+            window.location.href='profil.php';
         }
     </script>
+    <?php
+    if (isset($_POST['edit'])){
+        $username = $_POST['username'];
+        $nama = $_POST['nama'];
+        $bio = $_POST['bio'];
+
+        $update = "UPDATE user set username='$username', nama='$nama', bio='$bio' WHERE id_user='$_SESSION[id]'";
+        $query = mysqli_query($conn,$update);
+        if($query){
+            echo "<script>showEditProfileSuccessPopup()</script>";
+        } else {
+            echo "<script>alert('terjadi kesalahan')</script>";
+        }
+    }
+    ?>
 </body>
 
 </html>
