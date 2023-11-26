@@ -1,3 +1,12 @@
+<?php
+include "koneksi.php";
+session_start();
+
+$sql = "SELECT * from user WHERE id_user='$_SESSION[id]'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +27,13 @@
         <img class="image2" src="C:\Users\rafia\Downloads\kayu kecil.png" />
         <div class="overlay-container">
             <div class="overlay-item">
-                <input type="text" class="input-username" value="">
+                <input type="text" class="input-username" value="<?php echo $row['username']; ?>" readonly>
             </div>
             <div class="overlay-item" style="top: 101px">
-                <input type="text" class="input-fullname" value="">
+                <input type="text" class="input-fullname" value="<?php echo $row['nama']; ?>" readonly>
             </div>
             <div class="overlay-item3" style="top:203px;">
-                <textarea class="input-bio" value=""></textarea>
+                <textarea class="input-bio" readonly><?php echo $row['bio']; ?></textarea>
             </div>
         </div>
         <div class="input-container">
