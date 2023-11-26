@@ -12,8 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Username sudah ada. Silakan coba lagi.";
     } else {
         // Tambahkan user ke database
-        $hash_password = password_hash($password, PASSWORD_DEFAULT);
-        $insert_query = "INSERT INTO user (username, password, role_user) VALUES ('$username', '$hash_password', 'pinocchio')";
+        $insert_query = "INSERT INTO user (username, password, role_user) VALUES ('$username', '$password', 'pinocchio')";
         if ($conn->query($insert_query) === TRUE) {
             header("Location: login.php");
         } else {
