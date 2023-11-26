@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="review.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <title>Pinokio</title>
+  </head>
+  <body>
+    <nav class="container navbar">
+      <img src="pinokio/image 2.png" alt="Pinokio Logo" />
+      <div class="navbar-right">
+        <span onclick="window.location.href='loginpino.html'">HOME</span>
+        <span onclick="window.location.href='kuis.html'">QUIZ</span>
+        <span onclick="window.location.href='aboutus.html'">ABOUT US</span>
+        <img src="pinokio/profil pino.png" onclick="window.location.href='profil.html'" style="cursor: pointer;" alt="Profile Pino" />
+      </div>
+    </nav>
+    <dialog id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-text">
+          <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
+        </div>
+        <div class="modal-button">
+          <button class="accept">Ya</button>
+          <button class="decline">Tidak</button>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="myModalConfirm" class="modal">
+      <div class="modal-content">
+        <div class="modal-text">
+          <p>Update Data Berhasil !</p>
+        </div>
+        <div class="modal-button">
+          <button class="ok">ok</button>
+        </div>
+      </div>
+    </dialog>
+    <section class="container quiz">
+      <div class="quiz-headers">
+        <img src="pinokio/kayu.png" alt="Kayu" />
+        <h2 class="headings-pinokio-gradient">Kejujuran</h2>
+      </div>
+
+      <div class="quisioner wrong">
+        <p class="question">1. Mengapa Kejujuran Penting dalam Hubungan?</p>
+        <div class="answer">
+          <div class="choice">
+            <input type="radio" id="q1-1" name="q1" /><label for="q1-1"
+              >Mencegah kebosanan</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q1-2" name="q1" /><label for="q1-2"
+              >Memperoleh keuntungan pribadi</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q1-3" name="q1" /><label for="q1-3"
+              >Membangun kepercayaan</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q1-4" name="q1" /><label for="q1-4"
+              >Menjaga rahasia</label
+            >
+          </div>
+        </div>
+        <div class="skor">
+          <div>0/1</div>
+          <div>
+            <img src="pinokio/jiminy.png" alt="Jiminy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="quisioner">
+        <p class="question">
+          2. Bagaimana Kejujuran Mempengaruhi Kualitas Hidup?
+        </p>
+        <div class="answer">
+          <div class="choice">
+            <input type="radio" id="q2-1" name="q2" /><label for="q2-1"
+              >Meningkatkan kualitas hidup</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q2-2" name="q2" /><label for="q2-2"
+              >Tidak berpengaruh</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q2-3" name="q2" /><label for="q2-3"
+              >Menurunkan kualitas hidup</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q2-4" name="q2" /><label for="q2-4"
+              >Bergantung pada situasi</label
+            >
+          </div>
+        </div>
+        <div class="skor">
+          <div>1/1</div>
+          <div>
+            <img src="pinokio/jiminy.png" alt="Jiminy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="quisioner">
+        <p class="question">
+          3. Apakah Kehalusan Bicara Dapat Menutupi Kejujuran?
+        </p>
+        <div class="answer">
+          <div class="choice">
+            <input type="radio" id="q3-1" name="q3" /><label for="q3-1"
+              >Tidak pernah</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q3-2" name="q3" /><label for="q3-2"
+              >Terkadang</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q3-3" name="q3" /><label for="q3-3"
+              >Selalu</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q3-4" name="q3" /><label for="q3-4"
+              >Tidak Relevan</label
+            >
+          </div>
+        </div>
+        <div class="skor">
+          <div>1/1</div>
+          <div>
+            <img src="pinokio/jiminy.png" alt="Jiminy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="quisioner">
+        <p class="question">
+          4. Apakah Kejujuran Bersifat Subyektif atau Objektif?
+        </p>
+        <div class="answer">
+          <div class="choice">
+            <input type="radio" id="q4-1" name="q4" /><label for="q4-1"
+              >Bersifat subyektif</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q4-2" name="q4" /><label for="q4-2"
+              >Bersifat obyektif</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q4-3" name="q4" /><label for="q4-3"
+              >Bergantung pada situasi</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q4-4" name="q4" /><label for="q4-4"
+              >Tidak dapat ditentukan</label
+            >
+          </div>
+        </div>
+        <div class="skor">
+          <div>1/1</div>
+          <div>
+            <img src="pinokio/jiminy.png" alt="Jiminy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="quisioner">
+        <p class="question">
+          5. Mengapa Kejujuran Dapat Membantu Mengurangi Konflik?
+        </p>
+        <div class="answer">
+          <div class="choice">
+            <input type="radio" id="q5-1" name="q5" /><label for="q5-1"
+              >Karena membuat situasi membosankan</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q5-2" name="q5" /><label for="q5-2"
+              >Karena menghindari pembicaraan</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q5-3" name="q5" /><label for="q5-3"
+              >Karena mencegah salah pengertian dan kekecewaan</label
+            >
+          </div>
+          <div class="choice">
+            <input type="radio" id="q5-4" name="q5" /><label for="q5-4"
+              >Karena membuat hubungan membosankan</label
+            >
+          </div>
+        </div>
+        <div class="skor">
+          <div>1/1</div>
+          <div>
+            <img src="pinokio/jiminy.png" alt="Jiminy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button class="end" onclick="window.location.href='kejujuran.html'">Kembali</button>
+  </body>
+</html>
