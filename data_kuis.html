@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="data_kuis.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <title>Pinokio</title>
+  </head>
+  <body>
+    <nav class="container navbar">
+      <img src="pinokio/image 2.png" alt="Pinokio Logo" />
+      <div class="navbar-right">
+        <span onclick="window.location.href='loginpino.html'">HOME</span>
+        <span onclick="window.location.href='insert.html'">UJI</span>
+        <span onclick="window.location.href='aboutus.html'">ABOUT US</span>
+        <img src="pinokio/profil pino.png" onclick="window.location.href='profil.html'" style="cursor: pointer;" alt="Profile Pino" />
+      </div>
+    </nav>
+    <dialog id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-text">
+          <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
+        </div>
+        <div class="modal-button">
+          <button class="accept">Ya</button>
+          <button class="decline">Tidak</button>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="myModalConfirm" class="modal">
+      <div class="modal-content">
+        <div class="modal-text">
+          <p>Update Data Berhasil !</p>
+        </div>
+        <div class="modal-button">
+          <button class="ok">ok</button>
+        </div>
+      </div>
+    </dialog>
+    <section class="container header" >
+      <h2 class="headings-pinokio">Data Quiz</h2>
+      <button style="cursor: pointer;" onclick="window.location.href='insert.html'">BUAT</button>
+    </section>
+
+    <div class="container">
+      <section class="table">
+        <div class="table-headers table-row">
+          <div>NO</div>
+          <div>PERTANYAAN</div>
+          <div>PILIHAN PERTANYAAN</div>
+          <div>JAWABAN</div>
+          <div>TEMA</div>
+          <div>PETUNJUK</div>
+          <div>AKSI</div>
+        </div>
+        <div class="table-row">
+          <div>1</div>
+          <div>Mengapa Kejujuran Penting dalam Hubungan?</div>
+          <div>
+            A. Mencegah kebosanan
+            <br />B. Membangun kepercayaan <br />
+            C. Menjaga rahasia <br />D. Memperoleh keuntungan pribadi
+          </div>
+          <div>B. Membangun Kepercayaan</div>
+          <div>Kejujuran</div>
+          <div>
+            Pilih jawaban yang mencerminkan pandangan positif terhadap dampak
+            kejujuran terhadap kualitas hidup.
+          </div>
+          <div class="table-aksi">
+            <img src="pinokio/check.png" alt="Check" style="cursor: pointer" id="check" />
+            <img src="pinokio/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div>2</div>
+          <div>Bagaimana Kejujuran Mempengaruhi Kualitas Hidup?</div>
+          <div>
+            A. Meningkatkan kualitas hidup <br />B. Menurunkan kualitas hidup
+            <br />C. Tidak berpengaruh <br />D. Bergantung pada situasi
+          </div>
+          <div>A. Meningkatkan kualitas hidup</div>
+          <div>Kejujuran</div>
+          <div>
+            Pilih jawaban yang paling sesuai dengan dampak kejujuran terhadap
+            kualitas hidup.
+          </div>
+          <div class="table-aksi">
+            <img src="pinokio/check.png" alt="Check" style="cursor: pointer" id="check" />
+            <img src="pinokio/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div>3</div>
+          <div>Apakah Kehalusan Bicara Dapat Menutupi Kejujuran?</div>
+          <div>
+            A. Tidak pernah <br />B. Selalu <br />C. Terkadang <br />D. Tidak
+            Relevan
+          </div>
+          <div>C. Terkadang</div>
+          <div>Kejujuran</div>
+          <div>
+            Pilih jawaban yang menunjukkan bahwa kehalusan bicara tidak selalu
+            mengindikasikan kejujuran, tetapi dapat tergantung pada situasi atau
+            niatnya.
+          </div>
+          <div class="table-aksi">
+            <img src="pinokio/check.png" alt="Check" style="cursor: pointer" id="check" />
+            <img src="pinokio/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
+          </div>
+        </div>
+        <div class="table-row">
+          <div>4</div>
+          <div>
+            Bagaimana Tanggung Jawab Mempengaruhi Kualitas Hubungan Sosial?
+          </div>
+          <div>
+            A. Menyebabkan isolasi sosial <br />B. Menciptakan rasa saling
+            ketergantungan <br />C. Tidak ada pengaruh <br />D. Hanya membuat
+            stress
+          </div>
+          <div>B. Menciptakan rasa saling ketergantungan</div>
+          <div>Tanggung Jawab</div>
+          <div>
+            Pilih jawaban yang menunjukkan bahwa tanggung jawab dapat
+            menciptakan rasa saling ketergantungan, menekankan pentingnya
+            bekerjasama dalam hubungan sosial.
+          </div>
+          <div class="table-aksi">
+            <img src="pinokio/check.png" alt="Check" style="cursor: pointer" id="check" />
+            <img src="pinokio/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-top-first">
+            <p>
+              Menjelajahi Kebaikan, Kejujuran, dan Tanggung Jawab melalui Game
+              Kuis yang Mendidik
+            </p>
+            <div class="form">
+              <div>Kirim ke Email</div>
+              <div>
+                <input type="text" placeholder="masukkan saran..." />
+                <button style="cursor: pointer;">Kirim</button>
+              </div>
+            </div>
+          </div>
+          <div class="footer-top-second">
+          </div>
+          <div class="footer-top-third">
+            <div class="social-media">
+              <img src="pinokio/ig.png" alt="Instagram" />
+              <span>@pinocchio_official</span>
+            </div>
+            <div class="social-media">
+              <img src="pinokio/twt.png" alt="Twiter" />
+              <span>@pinocchio_official</span>
+            </div>
+            <div class="social-media">
+              <img src="pinokio/fb.png" alt="Facebook" />
+              <span>@pinocchio_official</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2023 Pinocchio. Hak Cipta Dilindungi</div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

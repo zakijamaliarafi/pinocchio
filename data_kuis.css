@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b225f 0%, #2c7598 62.15%, #4a9fbc 100%);
+  color: #fff;
+}
+
+.headings-pinokio {
+  font-family: "Berkshire Swash", serif;
+}
+
+.headings-pinokio-gradient {
+  font-family: "Berkshire Swash", serif;
+  background: linear-gradient(180deg, #f6d56e 0%, #e89f0f 59.9%, #b06c17 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  max-width: 1920px;
+  margin: auto;
+  padding: 24px 92px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navbar img[alt="Pinokio Logo"] {
+  flex: none;
+  width: 339px;
+  height: 83px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.navbar-right span{
+  padding: 5px 25px 5px 25px;
+  cursor: pointer;
+}
+
+.navbar-right span:hover {
+  background-color: #b32231;
+  color: white; /* Mengganti warna teks menjadi putih saat dihover */
+  border-radius: 50px; /* Menambahkan sudut lengkung untuk tampilan yang lebih baik */
+  padding: 5px 25px 5px 25px;
+}
+
+.header {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.header h2 {
+  font-size: 100px;
+  margin-bottom: 72px;
+}
+
+.header button {
+  background-color: #410304;
+  padding: 16px 92px;
+  border-radius: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.table {
+  background-color: #0b225fb2;
+  border: 1px solid #fff;
+  font-size: 24px;
+}
+
+.table-headers {
+  font-weight: 700;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 75px repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border-bottom: 1px solid #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #345075d9;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.footer-top .footer-top-first {
+  grid-column: span 3 / span 3;
+}
+
+.form {
+  margin-top: 32px;
+  display: flex;
+  align-items: start;
+  gap: 32px;
+}
+
+.form input {
+  background-color: #ffffffb2;
+  padding: 10px 20px;
+  border-radius: 99px;
+  font-size: 24px;
+  max-width: 300px;
+}
+
+.form button {
+  margin-top: 16px;
+  display: block;
+  background-color: #4a9fbc;
+  padding: 4px 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.footer-top-second div {
+  margin-bottom: 18px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
