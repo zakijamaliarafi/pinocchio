@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form>
+    <form action="signup_process.php" method="post" id="form">
     <div class="container">
         
         <div class="background-overlay"></div>
@@ -23,13 +23,13 @@
             <div class="login-link" onclick="window.location.href='login.html'">login</div>
         </div>
         <div class="input-box-username">
-            <input type="text" class="input-field username" value="">
+            <input name="username" type="text" class="input-field username" id="username" value="">
         </div>
         <div class="input-box-password">
-            <input type="text" class="input-field password" value="">
+            <input name="password" type="password" class="input-field password" id="password" value="">
         </div>
         <div class="input-box-confirm-password">
-            <input type="text" class="input-field confirm-password" value="">
+            <input name="confirm" type="password" class="input-field confirm-password" id="confirm" value="">
         </div>
         <div class="section">
             <div class="field username">Username</div>
@@ -38,7 +38,7 @@
         </div>
         <div class="signup-button">
             <div class="signup-button-inner">
-                <div><input type="submit" class="signup-button-text" onclick="showRegistrationSuccess(event)" value="SIGN UP"></div>
+                <div><input type="button" class="signup-button-text" onclick="checkForm()" value="SIGN UP"></div>
             </div>
         </div>
         <div class="looking-for-text">
@@ -49,22 +49,69 @@
     </form>
 
     <!-- Registration Success Popup -->
-    <div class="registration-success" style="display: none;">
+    <div class="popup registration-success" style="display: none;">
         <div class="title">Registrasi Berhasil</div>
         <div class="subtitle">Silahkan Login</div>
-        <div class="button-container" onclick="window.location.href='login.html'">
+        <div class="button-container">
             <div class="button" onclick="hideRegistrationSuccess()">OK</div>
         </div>
     </div>
 
+    <!-- Alert Empty Form -->
+    <div class="popup alert-form" style="display: none;">
+        <div class="title">Data Belum Lengkap</div>
+        <div class="subtitle">Silahkan Lengkapi Data</div>
+        <div class="button-container">
+            <div class="button" onclick="hideAlertForm()">OK</div>
+        </div>
+    </div>
+
+    <!-- Alert Incorrect Password -->
+    <div class="popup incorrect-password" style="display: none;">
+        <div class="title">Password Tidak Sama</div>
+        <div class="subtitle">Silahkan Cek Kembali</div>
+        <div class="button-container">
+            <div class="button" onclick="hidePasswordIncorrect()">OK</div>
+        </div>
+    </div>
+
     <script>
-        function showRegistrationSuccess(event) {
-            event.preventDefault(); // Menghentikan perilaku bawaan formulir
+        function checkForm(){
+            if(document.getElementById('username').value == '' ||
+               document.getElementById('password').value == '' ||
+               document.getElementById('confirm').value == ''
+            ){
+                showAlertForm();
+            } else{
+                checkPassword();
+            }
+        }
+        function showAlertForm(){
+            document.querySelector('.alert-form').style.display = 'flex';
+        }
+        function hideAlertForm(){
+            document.querySelector('.alert-form').style.display = 'none';
+        }
+        function checkPassword(){
+            if(document.getElementById('password').value == document.getElementById('confirm').value){
+                showRegistrationSuccess();
+            }else{
+                showPasswordIncorrect();
+            }
+        }
+        function showPasswordIncorrect(){
+            document.querySelector('.incorrect-password').style.display = 'flex';
+        }
+        function hidePasswordIncorrect(){
+            document.querySelector('.incorrect-password').style.display = 'none';
+        }
+        function showRegistrationSuccess() {
             document.querySelector('.registration-success').style.display = 'flex';
         }
 
         function hideRegistrationSuccess() {
             document.querySelector('.registration-success').style.display = 'none';
+            document.getElementById('form').submit();
         }
     </script>
 </body>
