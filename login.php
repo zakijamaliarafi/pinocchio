@@ -49,7 +49,7 @@
     <div class="login-fail" style="display: none;">
         <div class="title">Login Gagal</div>
         <div class="subtitle">Username/Password yang anda masukkan salah</div>
-        <div class="button-container" onclick="window.location.href='login.html'">
+        <div class="button-container" onclick="window.location.href='login.php'">
             <div class="button" onclick="hideLoginFail()">OK</div>
         </div>
         <img style="width: 62px; height: 62px; left: 160px; top: 45px; position: absolute" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\peringatan.png" />

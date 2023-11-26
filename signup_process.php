@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hash_password = password_hash($password, PASSWORD_DEFAULT);
         $insert_query = "INSERT INTO user (username, password, role_user) VALUES ('$username', '$hash_password', 'pinocchio')";
         if ($conn->query($insert_query) === TRUE) {
-            header("Location: login.html");
+            header("Location: login.php");
         } else {
             echo "Error: " . $insert_query . "<br>" . $conn->error;
         }
