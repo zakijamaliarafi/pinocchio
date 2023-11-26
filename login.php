@@ -70,13 +70,17 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
      
-        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+        $sql = "SELECT * FROM user WHERE username='$username'";
         $result = mysqli_query($conn, $sql);
         if ($result->num_rows > 0) {
             $row = mysqli_fetch_assoc($result);
-            $_SESSION['id'] = $row['id_user'];
-            $_SESSION['role'] = $row['role_user'];
-            header("Location: homepage.html");
+            if (password_verify($password, $row["password"])){
+                $_SESSION['id'] = $row['id_user'];
+                $_SESSION['role'] = $row['role_user'];
+                header("Location: homepage.html");
+            } else{
+                echo "<script>showLoginFail()</script>";    
+            }
         } else {
             echo "<script>showLoginFail()</script>";
         }
