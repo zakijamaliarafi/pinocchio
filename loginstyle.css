@@ -84,13 +84,13 @@ body {
     border-radius: 25px;
 }
 
-.signup-section {
+.login-section {
     left: 832px;
     top: 793px;
     position: relative;
 }
 
-.signup-text {
+.login-text {
     left: 0;
     top: 0;
     position: relative;
@@ -100,7 +100,7 @@ body {
     word-wrap: break-word;
 }
 
-.signup-link {
+.login-link {
     left: 204px;
     top: 0;
     position: absolute;
@@ -177,7 +177,7 @@ body {
 }
 
 
-.signup-button {
+.login-button {
     width: 200px;
     height: 60px;
     left: 895px;
@@ -186,7 +186,7 @@ body {
     cursor: pointer;
 }
 
-.signup-button-inner {
+.login-button-inner {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -195,7 +195,7 @@ body {
     border-radius: 50px;
 }
 
-.signup-button-text {
+.login-button-text {
     width: 100%;
     height: 100%;
     position: absolute;

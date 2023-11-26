@@ -75,6 +75,7 @@ $row = mysqli_fetch_assoc($result);
         function logout() {
             window.location.href='logout.php';
         }
+
     </script>
 </body>
 

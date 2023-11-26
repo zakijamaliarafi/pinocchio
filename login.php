@@ -19,9 +19,9 @@
         <img class="image image3" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio\image 24.png" />
         <div class="red-box"></div>
         
-        <div class="signup-section">
-            <div class="signup-text">Belum punya akun?</div>
-            <div class="signup-link" onclick="window.location.href='signup.html'">sign up</div>
+        <div class="login-section">
+            <div class="login-text">Belum punya akun?</div>
+            <div class="login-link" onclick="window.location.href='login.html'">sign up</div>
         </div>
         <div class="input-box-username">
             <input type="text" name="username" id="username" class="input-field username" value="">
@@ -33,9 +33,9 @@
             <div class="field username">Username</div>
             <div class="field password">Password</div>
         </div>
-        <div class="signup-button">
-            <div class="signup-button-inner">
-                <div><input type="submit" name="login" class="signup-button-text" onclick="check()" value="LOG IN"></div>
+        <div class="login-button">
+            <div class="login-button-inner">
+                <div><input type="submit" name="login" class="login-button-text" onclick="check()" value="LOG IN"></div>
             </div>
         </div>
         <div class="looking-for-text">
