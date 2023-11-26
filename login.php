@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form>
+    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
     <div class="container">
         
         <div class="background-overlay"></div>
@@ -24,10 +24,10 @@
             <div class="signup-link" onclick="window.location.href='signup.html'">sign up</div>
         </div>
         <div class="input-box-username">
-            <input type="text" class="input-field username" value="">
+            <input type="text" name="username" id="username" class="input-field username" value="">
         </div>
         <div class="input-box-password">
-            <input type="text" class="input-field password" value="">
+            <input type="password" name="password" id="password" class="input-field password" value="">
         </div>
         <div class="section">
             <div class="field username">Username</div>
@@ -35,7 +35,7 @@
         </div>
         <div class="signup-button">
             <div class="signup-button-inner">
-                <div><input type="submit" class="signup-button-text" onclick="showLoginFail(event)" value="LOG IN"></div>
+                <div><input type="submit" name="login" class="signup-button-text" onclick="check()" value="LOG IN"></div>
             </div>
         </div>
         <div class="looking-for-text">
@@ -54,11 +54,8 @@
         </div>
         <img style="width: 62px; height: 62px; left: 160px; top: 45px; position: absolute" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\peringatan.png" />
     </div>
-
-
     <script>
-        function showLoginFail(event) {
-            event.preventDefault(); // Menghentikan perilaku bawaan formulir
+        function showLoginFail() {
             document.querySelector('.login-fail').style.display = 'flex';
         }
 
@@ -66,6 +63,25 @@
             document.querySelector('.login-fail').style.display = 'none';
         }
     </script>
+    <?php
+    include "koneksi.php";
+
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+     
+        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+        $result = mysqli_query($conn, $sql);
+        if ($result->num_rows > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION['id'] = $row['id_user'];
+            $_SESSION['role'] = $row['role_user'];
+            header("Location: homepage.html");
+        } else {
+            echo "<script>showLoginFail()</script>";
+        }
+    }
+    ?>
 </body>
 
 </html>
