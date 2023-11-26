@@ -251,7 +251,7 @@ body {
 }
 
 /* CSS for Registration Success Popup */
-.registration-success {
+.popup {
     width: 600px;
     height: 300px;
     position: fixed;
@@ -268,7 +268,7 @@ body {
     z-index: 9999;
 }
 
-.registration-success .title {
+.popup .title {
     width: 100%;
     height: 51px;
     top: -15px;
@@ -282,7 +282,7 @@ body {
     margin-top: 20px;
 }
 
-.registration-success .subtitle {
+.popup .subtitle {
     width: 100%;
     height: auto;
     top: -20px;
@@ -296,7 +296,7 @@ body {
     margin-top: 10px;
 }
 
-.registration-success .button-container {
+.popup .button-container {
     width: 80%;
     height: auto;
     padding: 16px;
@@ -312,7 +312,7 @@ body {
     
 }
 
-.registration-success .button {
+.popup .button {
     text-align: center;
     color: #F9F9F9;
     font-size: 24px;
