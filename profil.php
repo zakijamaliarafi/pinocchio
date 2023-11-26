@@ -41,7 +41,7 @@ $row = mysqli_fetch_assoc($result);
             <div class="input-box" style="top: 203px;">Bio </div>
             <div class="input-box" style="top: 101px;">Full Name</div>
         </div>
-        <div class="button1" onclick="window.location.href='editprofil.html'">
+        <div class="button1" onclick="window.location.href='editprofil.php'">
             <div class="button1-inner"></div>
             <div class="button1-text">Edit Profile</div>
         </div>
