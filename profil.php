@@ -73,9 +73,7 @@ $row = mysqli_fetch_assoc($result);
         }
 
         function logout() {
-            // Implement your logout logic here
-            // For now, just hide the popup
-            hideLogoutPopup();
+            window.location.href='logout.php';
         }
     </script>
 </body>
