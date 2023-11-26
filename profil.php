@@ -21,7 +21,7 @@ $row = mysqli_fetch_assoc($result);
     <form>
     <div class="container">
         <div class="gradient-background"></div>
-        <img class="arrow-image" onclick="window.location.href='homepino.html'" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\back kayu.png" />
+        <img class="arrow-image" onclick="window.location.href='loginpino.html'" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\back kayu.png" />
         <img class="image1" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\image 2.png" />
         <div class="profile-background"></div>
         <img class="image2" src="C:\Users\rafia\Downloads\kayu kecil.png" />
