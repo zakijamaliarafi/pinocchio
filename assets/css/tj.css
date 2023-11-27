@@ -21,6 +21,7 @@ body {
   font-family: "Berkshire Swash", serif;
   background: linear-gradient(180deg, #f6d56e 0%, #e89f0f 59.9%, #b06c17 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -98,10 +99,6 @@ body {
   margin-bottom: 120px;
 }
 
-.quisioner.wrong {
-  background-color: #b3223199;
-}
-
 .question {
   font-size: 37px;
   font-weight: 700;
@@ -123,7 +120,7 @@ body {
   gap: 16px;
 }
 
-.skor {
+.hint {
   display: flex;
   align-items: center;
   justify-content: space-between;

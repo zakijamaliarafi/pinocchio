@@ -14,17 +14,17 @@ $row = mysqli_fetch_assoc($result);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profilstyle.css">
+    <link rel="stylesheet" href="assets/css/profilstyle.css">
 </head>
 
 <body>
     <form>
     <div class="container">
         <div class="gradient-background"></div>
-        <img class="arrow-image" onclick="window.location.href='loginpino.html'" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\back kayu.png" />
-        <img class="image1" src="C:\Users\rafia\Documents\Kuliah\Semester 3\Pemrograman Web\Praktikum\Responsi2\pinokio full\pinokio\image 2.png" />
+        <img class="arrow-image" onclick="window.location.href='homepage.php'" src="assets/img/back kayu.png" />
+        <img class="image1" src="assets/img/image 2.png" />
         <div class="profile-background"></div>
-        <img class="image2" src="C:\Users\rafia\Downloads\kayu kecil.png" />
+        <img class="image2" src="assets/img/kayu.png" />
         <div class="overlay-container">
             <div class="overlay-item">
                 <input type="text" class="input-username" value="<?php echo $row['username']; ?>" readonly>
