@@ -34,28 +34,29 @@
     </section>
 
     <div class="container">
+      <form action="insert_process.php" method="post">
       <section class="form-data">
         <div>
           <h3>1. Pertanyaan</h3>
-          <input type="text" />
+          <input type="text" name="pertanyaan" required/>
         </div>
         <div>
           <h3>2. Pilihan Jawaban</h3>
-          <div class="form-choice"><span>A.</span><input type="text" /></div>
-          <div class="form-choice"><span>B.</span><input type="text" /></div>
-          <div class="form-choice"><span>C.</span><input type="text" /></div>
-          <div class="form-choice"><span>D.</span><input type="text" /></div>
+          <div class="form-choice"><span>A.</span><input type="text" name="jawaban_a" required/></div>
+          <div class="form-choice"><span>B.</span><input type="text" name="jawaban_b" required/></div>
+          <div class="form-choice"><span>C.</span><input type="text" name="jawaban_c" required/></div>
+          <div class="form-choice"><span>D.</span><input type="text" name="jawaban_d" required/></div>
         </div>
         <div>
           <h3>3. Jawaban</h3>
-          <input type="text" />
+          <input type="text" name="jawaban_benar" required/>
         </div>
         <div>
           <h3>4. Tema</h3>
-          <select name="tema" id="tema">
+          <select name="tema" id="tema" required>
             <option value="kejujuran">Kejujuran</option>
-            <option value="tanggung-jawab">Tanggung Jawab</option>
-            <option value="tanggung-jawab">Kebaikan</option>
+            <option value="tanggung_jawab">Tanggung Jawab</option>
+            <option value="kebaikan">Kebaikan</option>
           </select>
         </div>
         <div>
@@ -65,13 +66,15 @@
             id="petunjuk"
             cols="75"
             rows="10"
+            required
           ></textarea>
         </div>
         <div class="button-action">
           <button class="batal">BATAL</button>
-          <button class="insert">INSERT</button>
+          <button type="submit" name="insert" class="insert">INSERT</button>
         </div>
       </section>
+      </form>
     </div>
 
     <footer class="footer">
