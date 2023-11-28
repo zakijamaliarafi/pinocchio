@@ -45,17 +45,17 @@ $tema = $_GET['tema'];
         <img src="assets/img/gepetoprofil.png" onclick="window.location.href='profil.php'" style="cursor: pointer;" alt="Profile Pino" />
       </div>
     </nav>
-    <!-- <dialog id="myModal" class="modal">
+    <dialog id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-text">
           <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
         </div>
         <div class="modal-button">
-          <button class="accept">Ya</button>
-          <button class="decline">Tidak</button>
+          <button class="accept" onclick="hapus()">Ya</button>
+          <button class="decline" onclick="hide()">Tidak</button>
         </div>
       </div>
-    </dialog> -->
+    </dialog>
     <dialog id="myModalConfirm" class="modal">
       <div class="modal-content">
         <div class="modal-text">
@@ -109,24 +109,11 @@ $tema = $_GET['tema'];
             <td>$row[petunjuk]</td>
             <td>
               <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
-              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' id='trash' />
+              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' onclick='setIdHapus($row[id_pertanyaan],\"$row[tipe]\")' />
               
             </td>
           </tr>";
           $no++;
-          ?>
-          <dialog id="myModal" class="modal">
-            <div class="modal-content">
-              <div class="modal-text">
-                <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
-              </div>
-              <div class="modal-button">
-                <button class="accept" onclick="window.location.href='delete_process.php?id=<?php echo $row['id_pertanyaan'] ?>&tipe=<?php echo $row['tipe'] ?>'" >Ya</button>
-                <button class="decline">Tidak</button>
-              </div>
-            </div>
-          </dialog>
-            <?php
           }
           ?>
         </table>
@@ -170,23 +157,10 @@ $tema = $_GET['tema'];
             <td>$row[petunjuk]</td>
             <td>
               <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
-              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' id='trash' />
+              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' onclick='setIdHapus($row[id_pertanyaan],\"$row[tipe]\")' />
             </td>
           </tr>";
           $no++;
-          ?>
-          <dialog id="myModal" class="modal">
-            <div class="modal-content">
-              <div class="modal-text">
-                <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
-              </div>
-              <div class="modal-button">
-                <button class="accept" onclick="window.location.href='delete_process.php?id=<?php echo $row['id_pertanyaan'] ?>&tipe=<?php echo $row['tipe'] ?>'" >Ya</button>
-                <button class="decline">Tidak</button>
-              </div>
-            </div>
-          </dialog>
-            <?php
           }
           ?>
         </table>
@@ -230,23 +204,10 @@ $tema = $_GET['tema'];
             <td>$row[petunjuk]</td>
             <td>
               <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
-              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' id='trash' />
+              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' onclick='setIdHapus($row[id_pertanyaan],\"$row[tipe]\")' />
             </td>
           </tr>";
           $no++;
-          ?>
-          <dialog id="myModal" class="modal">
-            <div class="modal-content">
-              <div class="modal-text">
-                <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
-              </div>
-              <div class="modal-button">
-                <button class="accept" onclick="window.location.href='delete_process.php?id=<?php echo $row['id_pertanyaan'] ?>&tipe=<?php echo $row['tipe'] ?>'" >Ya</button>
-                <button class="decline">Tidak</button>
-              </div>
-            </div>
-          </dialog>
-            <?php
           }
           ?>
         </table>
@@ -296,5 +257,21 @@ $tema = $_GET['tema'];
       </div>
     </footer>
   </body>
-  <script src="assets/js/script.js"></script>
+  <script>
+    var id_hapus = 0;
+    var tipe = '';
+    function setIdHapus(id, tipe_pertanyaan){
+      id_hapus = id;
+      tipe = tipe_pertanyaan;
+      document.getElementById("myModal").style.display = "block";  
+    }
+    function hapus(){
+      window.location.href = "delete_process.php?id=" + String(id_hapus) + "&tipe=" + tipe;
+    }
+    function hide(){
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+  </script>
+  <!-- <script src="assets/js/script.js"></script> -->
 </html>
