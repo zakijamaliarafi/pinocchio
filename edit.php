@@ -12,6 +12,7 @@ if($_SESSION['role']=='pinocchio'){
   exit();
 }
 $id = $_GET['id'];
+$tipe = $_GET['tipe'];
 
 if(isset($_POST['edit'])){
   $pertanyaan = $_POST['pertanyaan'];
@@ -123,9 +124,9 @@ if(isset($_POST['edit'])){
         <div>
           <h3>4. Tema</h3>
           <select name="tema" id="tema">
-            <option value="kejujuran" value="<?php if($row['tema']=='kejujuran'){echo 'selected';} ?>">Kejujuran</option>
-            <option value="tanggung-jawab" value="<?php if($row['tema']=='tanggung_jawab'){echo 'selected';} ?>">Tanggung Jawab</option>
-            <option value="tanggung-jawab" value="<?php if($row['tema']=='kebaikan'){echo 'selected';} ?>">Kebaikan</option>
+            <option value="kejujuran" <?php if($tipe=='kejujuran'){echo 'selected';} ?>>Kejujuran</option>
+            <option value="tanggung_jawab" <?php if($tipe=='tanggung_jawab'){echo 'selected';} ?>>Tanggung Jawab</option>
+            <option value="kebaikan" <?php if($tipe=='kebaikan'){echo 'selected';} ?>>Kebaikan</option>
           </select>
         </div>
         <div>
