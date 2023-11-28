@@ -1,3 +1,13 @@
+<?php
+include "koneksi.php";
+session_start();
+
+if(isset($_SESSION['id'])){
+  header("Location: homepage.php");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +32,7 @@
     <nav class="container navbar">
       <img src="assets/img/image 2.png" alt="Pinokio Logo" />
       <div class="navbar-right">
-        <span onclick="window.location.href='signup.html'">SIGN UP</span>
+        <span onclick="window.location.href='signup.php'">SIGN UP</span>
         <span onclick="window.location.href='login.php'">LOGIN</span>
         <span onclick="window.location.href='login.php'">HOME</span>
         <span onclick="window.location.href='#'">ABOUT US</span>

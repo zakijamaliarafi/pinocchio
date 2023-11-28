@@ -1,3 +1,13 @@
+<?php
+include "koneksi.php";
+session_start();
+
+if(isset($_SESSION['id'])){
+  header("Location: homepage.php");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +31,7 @@
         
         <div class="login-section">
             <div class="login-text">Belum punya akun?</div>
-            <div class="login-link" onclick="window.location.href='signup.html'">sign up</div>
+            <div class="login-link" onclick="window.location.href='signup.php'">sign up</div>
         </div>
         <div class="input-box-username">
             <input type="text" name="username" id="username" class="input-field username" value="">
@@ -41,7 +51,7 @@
         <div class="looking-for-text">
             <div class="looking-for-text-inner">Welcome <span class="everyone-text">Everyone</span></div>
         </div>
-        <img class="image4" onclick="window.location.href='index.html'" src="assets/img/back kayu.png" />
+        <img class="image4" onclick="window.location.href='index.php'" src="assets/img/back kayu.png" />
     </div>
     </form>
 
@@ -64,8 +74,6 @@
         }
     </script>
     <?php
-    include "koneksi.php";
-    session_start();
 
     if (isset($_POST['login'])) {
         $username = $_POST['username'];

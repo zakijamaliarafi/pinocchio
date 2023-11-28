@@ -29,7 +29,7 @@ session_start();
       <img src="assets/img/image 2.png" alt="Pinokio Logo" />
       <div class="navbar-right">
         <span onclick="window.location.href='homepage.php'">HOME</span>
-        <span onclick="window.location.href='data_kuis.html'">UJI</span>
+        <span onclick="window.location.href='data_kuis.php'">UJI</span>
         <span onclick="window.location.href='#'">ABOUT US</span>
         <img src="assets/img/gepetoprofil.png" onclick="window.location.href='profil.php'" style="cursor: pointer;" alt="Profile Pino" />
       </div>

@@ -1,3 +1,13 @@
+<?php
+include "koneksi.php";
+session_start();
+
+if(isset($_SESSION['id'])){
+  header("Location: homepage.php");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +54,7 @@
         <div class="looking-for-text">
             <div class="looking-for-text-inner">Looking for <span class="new-member-text">New</span> Member</div>
         </div>
-        <img class="image4" onclick="window.location.href='index.html'" src="assets/img/back kayu.png" />
+        <img class="image4" onclick="window.location.href='index.php'" src="assets/img/back kayu.png" />
     </div>
     </form>
 
