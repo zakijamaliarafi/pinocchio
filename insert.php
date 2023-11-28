@@ -1,3 +1,19 @@
+<?php
+include "koneksi.php";
+session_start();
+
+if(!isset($_SESSION['id'])){
+  header('Location: login.php');
+  exit();
+}
+
+if($_SESSION['role']=='pinocchio'){
+  header('Location: homepage.php');
+  exit();
+}
+$tema = $_GET['tema'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +35,16 @@
     <title>Pinokio</title>
   </head>
   <body>
+  <dialog id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-text">
+          <p>Update Data Berhasil !</p>
+        </div>
+        <div class="modal-button">
+          <button class="ok">ok</button>
+        </div>
+      </div>
+    </dialog>
     <nav class="container navbar">
       <img src="assets/img/image 2.png" alt="Pinokio Logo" />
       <div class="navbar-right">
@@ -54,9 +80,9 @@
         <div>
           <h3>4. Tema</h3>
           <select name="tema" id="tema" required>
-            <option value="kejujuran">Kejujuran</option>
-            <option value="tanggung_jawab">Tanggung Jawab</option>
-            <option value="kebaikan">Kebaikan</option>
+            <option value="kejujuran" <?php if($tema=="kejujuran"){echo "selected";} ?>>Kejujuran</option>
+            <option value="tanggung_jawab" <?php if($tema=="tanggung_jawab"){echo "selected";} ?>>Tanggung Jawab</option>
+            <option value="kebaikan" <?php if($tema=="kebaikan"){echo "selected";} ?>>Kebaikan</option>
           </select>
         </div>
         <div>

@@ -56,19 +56,9 @@ $tema = $_GET['tema'];
         </div>
       </div>
     </dialog>
-    <dialog id="myModalConfirm" class="modal">
-      <div class="modal-content">
-        <div class="modal-text">
-          <p>Update Data Berhasil !</p>
-        </div>
-        <div class="modal-button">
-          <button class="ok">ok</button>
-        </div>
-      </div>
-    </dialog>
     <section class="container header" >
       <h2 class="headings-pinokio">Data Quiz</h2>
-      <button style="cursor: pointer;" onclick="window.location.href='insert.html'">BUAT</button>
+      <button style="cursor: pointer;" onclick="window.location.href='insert.php?tema=<?php echo $tema ?>'">BUAT</button>
     </section>
 
     <?php
