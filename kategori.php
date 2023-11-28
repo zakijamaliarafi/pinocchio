@@ -78,7 +78,7 @@ if(!isset($_SESSION['id'])){
           <div class="group">
             <div class="overlap-group"><div class="text-wrapper" onclick="window.location.href='kategori.php'">UJI</div></div>
             <div class="text-wrapper-2" onclick="window.location.href='homepage.php'">HOME</div>
-            <div class="text-wrapper-3" onclick="window.location.href='aboutus.php'">ABOUT US</div>
+            <div class="text-wrapper-3" onclick="window.location.href='aboutus.php'">TENTANG KAMI</div>
           </div>
           <img class="image" src="assets/img/image 2.png" />
           <div class="text-wrapper-4" style="left: 650px;">Pilih Kategori</div>

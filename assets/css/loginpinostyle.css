@@ -25,8 +25,8 @@ body {
   }
   
   .homepage-abis-login .group {
-    position: absolute;
-    width: 750px;
+    position: relative;
+    width: 1000px;
     height: 69px;
     top: 59px;
     left: 939px;

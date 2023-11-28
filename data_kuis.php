@@ -41,7 +41,7 @@ $tema = $_GET['tema'];
       <div class="navbar-right">
         <span onclick="window.location.href='homepage.php'">HOME</span>
         <span onclick="window.location.href='kategori.php'">UJI</span>
-        <span onclick="window.location.href='aboutus.php'">ABOUT US</span>
+        <span onclick="window.location.href='aboutus.php'">TENTANG KAMI</span>
         <img src="assets/img/gepetoprofil.png" onclick="window.location.href='profil.php'" style="cursor: pointer;" alt="Profile Pino" />
       </div>
     </nav>

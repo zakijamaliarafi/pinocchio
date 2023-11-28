@@ -43,7 +43,7 @@ $tema = $_GET['tema'];
       <div class="navbar-right">
         <span id="nav-link">HOME</span>
         <span class="active" id="nav-link">KUIS</span>
-        <span id="nav-link">ABOUT US</span>
+        <span id="nav-link">TENTANG KAMI</span>
         <img src="assets/img/profil pino.png" alt="Profile Pino" style="cursor: pointer;" id="nav-link" />
       </div>
     </nav>

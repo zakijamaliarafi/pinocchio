@@ -35,7 +35,7 @@ if(isset($_SESSION['id'])){
         <span onclick="window.location.href='signup.php'">SIGN UP</span>
         <span onclick="window.location.href='login.php'">LOGIN</span>
         <span onclick="window.location.href='login.php'">HOME</span>
-        <span onclick="window.location.href='aboutus.php'">ABOUT US</span>
+        <span onclick="window.location.href='aboutus.php'">TENTANG KAMI</span>
       </div>
     </nav>
 
