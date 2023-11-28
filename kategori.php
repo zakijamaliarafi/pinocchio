@@ -1,15 +1,26 @@
+<?php
+include "koneksi.php";
+session_start();
+
+if(!isset($_SESSION['id'])){
+    header('Location: login.php');
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="assets/css/kuisstyle.css" />
+    <link rel="stylesheet" href="assets/css/kategoristyle.css" />
   </head>
   <body>
     <div class="kuis">
       <div class="div">
         <div class="group">
-          <div class="overlap-group"><div class="text-wrapper" onclick="window.location.href='kuis.html'">QUIZ</div></div>
+          <div class="overlap-group"><div class="text-wrapper" onclick="window.location.href='kategori.php'">QUIZ</div></div>
           <div class="text-wrapper-2" onclick="window.location.href='homepage.php'">HOME</div>
           <div class="text-wrapper-3" onclick="window.location.href='#'">ABOUT US</div>
         </div>
@@ -31,9 +42,9 @@
             <img class="baik" src="assets/img/baik.png" />
             <img class="tj" src="assets/img/tj.png" />
             <img class="jujur" src="assets/img/jujur.png" />
-            <div class="div-wrapper"><div class="text-wrapper-7" onclick="window.location.href='kejujuran.html'">KEJUJURAN</div></div>
-            <div class="text-wrapper-6" onclick="window.location.href='tj.html'">TANGGUNG JAWAB</div>
-            <div class="text-wrapper-5" onclick="window.location.href='kebaikan.html'">KEBAIKAN</div>
+            <div class="div-wrapper"><div class="text-wrapper-7" onclick="window.location.href='kuis.php?tema=kejujuran'">KEJUJURAN</div></div>
+            <div class="text-wrapper-6" onclick="window.location.href='kuis.php?tema=tanggung_jawab'">TANGGUNG JAWAB</div>
+            <div class="text-wrapper-5" onclick="window.location.href='kuis.php?tema=kebaikan'">KEBAIKAN</div>
           </div>
         </div>
         <p class="jika-kamu-hidup">
