@@ -15,8 +15,8 @@ if($_SESSION['role']=='pinocchio'){
         <div class="about-us-pino">
         <div class="div">
             <div class="group">
-            <div class="text-wrapper" onclick="window.location.href='loginpino.html'">HOME</div>
-            <div class="text-wrapper-2" onclick="window.location.href='kuis.html'">KUIS</div>
+            <div class="text-wrapper" onclick="window.location.href='homepage.php'">HOME</div>
+            <div class="text-wrapper-2" onclick="window.location.href='kategori.php'">KUIS</div>
             </div>
             <div class="overlap-wrapper">
                 <div class="overlap-2">
@@ -76,13 +76,13 @@ if($_SESSION['role']=='pinocchio'){
         <div class="about-us-gepeto">
         <div class="div">
             <div class="group">
-            <div class="text-wrapper" onclick="window.location.href='logingepeto.html'">HOME</div>
-            <div class="text-wrapper-2" onclick="window.location.href='kuis.html'">UJI</div>
+            <div class="text-wrapper" onclick="window.location.href='homepage.php'">HOME</div>
+            <div class="text-wrapper-2" onclick="window.location.href='kategori.php'">UJI</div>
             </div>
             <div class="overlap-wrapper" onclick="window.location.href='profil.php'">
                 <div class="overlap-2">
                 <div class="ellipse"></div>
-                <img class="image-4"  src="assets/img/gepetoprofil1.png" />
+                <img class="image-4"  src="assets/img/gepetoprofil.png" />
                 </div>
             </div>
             <img class="image" src="assets/img/image 2.png" />
@@ -137,9 +137,9 @@ if($_SESSION['role']=='pinocchio'){
         <div class="about-us">
         <div class="div">
             <div class="group">
-            <div class="text-wrapper" onclick="window.location.href='signup.html'">SIGN UP</div>
-            <div class="text-wrapper-1" onclick="window.location.href='login.html'">LOGIN</div>
-            <div class="text-wrapper-2" onclick="window.location.href='homepage.html'">HOME</div>
+            <div class="text-wrapper" onclick="window.location.href='signup.php'">SIGN UP</div>
+            <div class="text-wrapper-1" onclick="window.location.href='login.php'">LOGIN</div>
+            <div class="text-wrapper-2" onclick="window.location.href='homepage.php'">HOME</div>
             </div>
             <img class="image" src="assets/img/image 2.png" />
             <img class="pinocchio-tim" src="assets/img/Pinocchio Tim.png" />
