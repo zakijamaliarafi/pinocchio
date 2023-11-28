@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             ";
             $result = mysqli_query($conn, $insert);
             if($result){
-                header("Location: data_kuis.php");
+                header("Location: data_kuis.php?tema=$tema");
             } else {
                 "terjadi kesalahan, silahkan coba lagi";
             }

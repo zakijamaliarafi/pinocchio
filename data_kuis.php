@@ -45,7 +45,7 @@ $tema = $_GET['tema'];
         <img src="assets/img/gepetoprofil.png" onclick="window.location.href='profil.php'" style="cursor: pointer;" alt="Profile Pino" />
       </div>
     </nav>
-    <dialog id="myModal" class="modal">
+    <!-- <dialog id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-text">
           <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
@@ -55,7 +55,7 @@ $tema = $_GET['tema'];
           <button class="decline">Tidak</button>
         </div>
       </div>
-    </dialog>
+    </dialog> -->
     <dialog id="myModalConfirm" class="modal">
       <div class="modal-content">
         <div class="modal-text">
@@ -110,9 +110,23 @@ $tema = $_GET['tema'];
             <td>
               <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
               <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' id='trash' />
+              
             </td>
           </tr>";
           $no++;
+          ?>
+          <dialog id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-text">
+                <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
+              </div>
+              <div class="modal-button">
+                <button class="accept" onclick="window.location.href='delete_process.php?id=<?php echo $row['id_pertanyaan'] ?>&tipe=<?php echo $row['tipe'] ?>'" >Ya</button>
+                <button class="decline">Tidak</button>
+              </div>
+            </div>
+          </dialog>
+            <?php
           }
           ?>
         </table>
@@ -160,6 +174,19 @@ $tema = $_GET['tema'];
             </td>
           </tr>";
           $no++;
+          ?>
+          <dialog id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-text">
+                <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
+              </div>
+              <div class="modal-button">
+                <button class="accept" onclick="window.location.href='delete_process.php?id=<?php echo $row['id_pertanyaan'] ?>&tipe=<?php echo $row['tipe'] ?>'" >Ya</button>
+                <button class="decline">Tidak</button>
+              </div>
+            </div>
+          </dialog>
+            <?php
           }
           ?>
         </table>
@@ -207,6 +234,19 @@ $tema = $_GET['tema'];
             </td>
           </tr>";
           $no++;
+          ?>
+          <dialog id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-text">
+                <p>Apakah Anda Yakin Ingin Menghapus Data?</p>
+              </div>
+              <div class="modal-button">
+                <button class="accept" onclick="window.location.href='delete_process.php?id=<?php echo $row['id_pertanyaan'] ?>&tipe=<?php echo $row['tipe'] ?>'" >Ya</button>
+                <button class="decline">Tidak</button>
+              </div>
+            </div>
+          </dialog>
+            <?php
           }
           ?>
         </table>
@@ -219,99 +259,6 @@ $tema = $_GET['tema'];
     }
     ?>
     
-    
-    <!-- <div class="container">
-      <section class="table">
-        <div class="table-headers table-row">
-          <div>NO</div>
-          <div>PERTANYAAN</div>
-          <div>PILIHAN PERTANYAAN</div>
-          <div>JAWABAN</div>
-          <div>TEMA</div>
-          <div>PETUNJUK</div>
-          <div>AKSI</div>
-        </div>
-        <div class="table-row">
-          <div>1</div>
-          <div>Mengapa Kejujuran Penting dalam Hubungan?</div>
-          <div>
-            A. Mencegah kebosanan
-            <br />B. Membangun kepercayaan <br />
-            C. Menjaga rahasia <br />D. Memperoleh keuntungan pribadi
-          </div>
-          <div>B. Membangun Kepercayaan</div>
-          <div>Kejujuran</div>
-          <div>
-            Pilih jawaban yang mencerminkan pandangan positif terhadap dampak
-            kejujuran terhadap kualitas hidup.
-          </div>
-          <div class="table-aksi">
-            <img src="assets/img/check.png" alt="Check" style="cursor: pointer" id="check" />
-            <img src="assets/img/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
-          </div>
-        </div>
-        <div class="table-row">
-          <div>2</div>
-          <div>Bagaimana Kejujuran Mempengaruhi Kualitas Hidup?</div>
-          <div>
-            A. Meningkatkan kualitas hidup <br />B. Menurunkan kualitas hidup
-            <br />C. Tidak berpengaruh <br />D. Bergantung pada situasi
-          </div>
-          <div>A. Meningkatkan kualitas hidup</div>
-          <div>Kejujuran</div>
-          <div>
-            Pilih jawaban yang paling sesuai dengan dampak kejujuran terhadap
-            kualitas hidup.
-          </div>
-          <div class="table-aksi">
-            <img src="assets/img/check.png" alt="Check" style="cursor: pointer" id="check" />
-            <img src="assets/img/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
-          </div>
-        </div>
-        <div class="table-row">
-          <div>3</div>
-          <div>Apakah Kehalusan Bicara Dapat Menutupi Kejujuran?</div>
-          <div>
-            A. Tidak pernah <br />B. Selalu <br />C. Terkadang <br />D. Tidak
-            Relevan
-          </div>
-          <div>C. Terkadang</div>
-          <div>Kejujuran</div>
-          <div>
-            Pilih jawaban yang menunjukkan bahwa kehalusan bicara tidak selalu
-            mengindikasikan kejujuran, tetapi dapat tergantung pada situasi atau
-            niatnya.
-          </div>
-          <div class="table-aksi">
-            <img src="assets/img/check.png" alt="Check" style="cursor: pointer" id="check" />
-            <img src="assets/img/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
-          </div>
-        </div>
-        <div class="table-row">
-          <div>4</div>
-          <div>
-            Bagaimana Tanggung Jawab Mempengaruhi Kualitas Hubungan Sosial?
-          </div>
-          <div>
-            A. Menyebabkan isolasi sosial <br />B. Menciptakan rasa saling
-            ketergantungan <br />C. Tidak ada pengaruh <br />D. Hanya membuat
-            stress
-          </div>
-          <div>B. Menciptakan rasa saling ketergantungan</div>
-          <div>Tanggung Jawab</div>
-          <div>
-            Pilih jawaban yang menunjukkan bahwa tanggung jawab dapat
-            menciptakan rasa saling ketergantungan, menekankan pentingnya
-            bekerjasama dalam hubungan sosial.
-          </div>
-          <div class="table-aksi">
-            <img src="assets/img/check.png" alt="Check" style="cursor: pointer" id="check" />
-            <img src="assets/img/trash.png" alt="Trash" style="cursor: pointer" id="trash" />
-          </div>
-        </div>
-      </section>
-    </div> -->
-
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
