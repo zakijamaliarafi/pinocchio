@@ -90,26 +90,6 @@ $tema = $_GET['tema'];
       </div>
     </dialog>
 
-    <!-- <dialog id="myModalResult" class="modal">
-      <div class="modal-content-result">
-        <div class="modal-text">
-          <h1>HASIL QUIZ</h1>
-          <div>
-            <img src="assets/img/benar.png" alt="benar" />
-            <span>benar : 5</span>
-          </div>
-          <div>
-            <img src="assets/img/salah.png" alt="benar" />
-            <span>salah : 0</span>
-          </div>
-          <h2>Nilai kamu adalah 100</h2>
-        </div>
-        <div class="modal-button">
-          <button class="result">Result</button>
-          <button class="abort">Tidak</button>
-        </div>
-      </div>
-    </dialog> -->
     <?php
     if($tema=='tanggung_jawab'){
       ?>
@@ -151,6 +131,9 @@ $tema = $_GET['tema'];
               </div>
             </div>
               ";
+            if($no==5){
+              break;
+            }
             $no++;
             } 
           ?>
@@ -198,6 +181,9 @@ $tema = $_GET['tema'];
               </div>
             </div>
               ";
+            if($no==5){
+              break;
+            }
             $no++;
             } 
           ?>
@@ -245,6 +231,9 @@ $tema = $_GET['tema'];
               </div>
             </div>
               ";
+            if($no==5){
+              break;
+            }
             $no++;
             } 
           ?>
@@ -254,8 +243,6 @@ $tema = $_GET['tema'];
       <?php
     }
     ?>
-
-    
 
   <?php
   if(isset($_POST['selesai'])){
@@ -299,5 +286,4 @@ $tema = $_GET['tema'];
   ?>
   
   </body>
-  
 </html>
