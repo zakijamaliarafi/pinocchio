@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600&family=Berkshire+Swash&family=Poppins:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Poppins', 'Berkshire Swash';
+}
+
+.about-us-pino {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .about-us-pino .div {
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    background: linear-gradient(180deg, rgb(10.72, 34.39, 95.27) 0%, rgb(44, 117, 152) 62.15%, rgb(74, 159, 188) 100%);
+    width: 1920px;
+    height: 2160px;
+    position: relative;
+  }
+  
+  .about-us-pino .group {
+    position: absolute;
+    width: 325px;
+    height: 45px;
+    top: 71px;
+    left: 1297px;
+  }
+
+  
+  
+  .about-us-pino .text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-Bold", ;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 5px 25px 5px 25px;
+  }
+
+  .about-us-pino .text-wrapper:hover {
+    background-color: #b32231;
+    color: white; 
+    border-radius: 50px; 
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+  }
+  
+  .about-us-pino .text-wrapper-2 {
+    position: absolute;
+    top: 0;
+    left: 251px;
+    font-family: "Poppins-Bold", ;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 5px 25px 5px 25px;
+  }
+
+  .about-us-pino .text-wrapper-2:hover {
+    background-color: #b32231;
+    color: white; 
+    border-radius: 50px; 
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+  }
+  
+  .about-us-pino .image {
+    position: absolute;
+    width: 339px;
+    height: 83px;
+    top: 62px;
+    left: 56px;
+  }
+  
+  .about-us-pino .pinocchio-tim {
+    position: absolute;
+    width: 682px;
+    height: 100px;
+    top: 265px;
+    left: 619px;
+  }
+  
+  .about-us-pino .FOOTER {
+    position: absolute;
+    width: 1985px;
+    height: 509px;
+    top: 1652px;
+    left: -33px;
+    background-color: #345075d9;
+  }
+  
+  .about-us-pino .p {
+    position: absolute;
+    top: 421px;
+    left: 809px;
+    font-family: "Poppins-Medium", ;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .FOOTER-2 {
+    position: absolute;
+    width: 879px;
+    top: 92px;
+    left: 91px;
+    font-family: "Poppins-SemiBold", ;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .group-2 {
+    position: absolute;
+    width: 275px;
+    height: 247px;
+    top: 103px;
+    left: 1525px;
+  }
+  
+  .about-us-pino .text-wrapper-3 {
+    position: absolute;
+    width: 269px;
+    top: 207px;
+    left: 0;
+    font-family: "Poppins-SemiBold", ;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .text-wrapper-4 {
+    position: absolute;
+    width: 269px;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-SemiBold", ;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .text-wrapper-5 {
+    position: absolute;
+    width: 269px;
+    top: 104px;
+    left: 0;
+    font-family: "Poppins-SemiBold", ;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .group-3 {
+    position: absolute;
+    width: 60px;
+    height: 267px;
+    top: 93px;
+    left: 1434px;
+  }
+  
+  .about-us-pino .fb {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 207px;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .about-us-pino .twt {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 104px;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .about-us-pino .ig {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .about-us-pino .overlap {
+    position: absolute;
+    width: 1462px;
+    height: 568px;
+    top: 481px;
+    left: 226px;
+  }
+  
+  .about-us-pino .group-4 {
+    position: absolute;
+    width: 1462px;
+    height: 555px;
+    top: 13px;
+    left: 0;
+  }
+  
+  .about-us-pino .overlap-group {
+    position: absolute;
+    width: 448px;
+    height: 555px;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-us-pino .rectangle {
+    position: absolute;
+    width: 440px;
+    height: 537px;
+    top: 18px;
+    left: 8px;
+    background-color: #0a225f;
+  }
+  
+  .about-us-pino .rectangle-2 {
+    position: absolute;
+    width: 390px;
+    height: 134px;
+    top: 378px;
+    left: 33px;
+    background-color: #2c759880;
+  }
+  
+  .about-us-pino .img {
+    position: absolute;
+    width: 421px;
+    height: 378px;
+    top: 0;
+    left: 0;
+  }
+  
+  .about-us-pino .claresta-berthalita {
+    position: absolute;
+    top: 384px;
+    left: 55px;
+    font-family: "Berkshire Swash", ;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .rectangle-wrapper {
+    position: absolute;
+    width: 440px;
+    height: 537px;
+    top: 18px;
+    left: 514px;
+    background-color: #0a225f;
+  }
+  
+  .about-us-pino .rectangle-3 {
+    position: relative;
+    width: 390px;
+    height: 134px;
+    top: 360px;
+    left: 25px;
+    background-color: #2c759880;
+  }
+  
+  .about-us-pino .div-wrapper {
+    position: absolute;
+    width: 440px;
+    height: 537px;
+    top: 18px;
+    left: 1020px;
+    background-color: #0a225f;
+  }
+  
+  .about-us-pino .rectangle-4 {
+    position: relative;
+    width: 390px;
+    height: 134px;
+    top: 360px;
+    left: 22px;
+    background-color: #2c759880;
+  }
+  
+  .about-us-pino .image-2 {
+    position: absolute;
+    width: 371px;
+    height: 385px;
+    top: 6px;
+    left: 514px;
+  }
+  
+  .about-us-pino .image-3 {
+    position: absolute;
+    width: 280px;
+    height: 391px;
+    top: 0;
+    left: 1105px;
+  }
+  
+  .about-us-pino .muhammad-rafi {
+    position: absolute;
+    top: 400px;
+    left: 580px;
+    font-family: "Berkshire Swash-Regular", ;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .zaki-jamali-arafi {
+    position: absolute;
+    top: 376px;
+    left: 1120px;
+    font-family: "Berkshire Swash-Regular", ;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-pino .overlap-wrapper {
+    position: absolute;
+    width: 77px;
+    height: 86px;
+    top: 51px;
+    left: 1760px;
+  }
+  
+  .about-us-pino .overlap-2 {
+    position: relative;
+    height: 86px;
+  }
+  
+  .about-us-pino .ellipse {
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    top: 0;
+    left: 0;
+    background-color: #c39272;
+    border-radius: 38.5px;
+  }
+  
+  .about-us-pino .image-4 {
+    position: absolute;
+    width: 74px;
+    height: 85px;
+    top: 1px;
+    left: 1px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  :root {
+    --variable-collection-warna-2: rgba(197, 218, 209, 1);
+    --variable-collection-warna-1: rgba(179, 34, 49, 1);
+    --variable-collection-warna-3: rgba(74, 159, 188, 1);
+    --variable-collection-warna-4: rgba(183, 135, 51, 1);
+    --variable-collection-warna-5: rgba(47, 101, 67, 1);
+    --variable-collection-background: rgba(47, 101, 67, 1);
+    --variable-collection-warna-6: rgba(197, 218, 209, 0.6);
+    --variable-collection-warna-7: rgba(79, 58, 22, 1);
+    --variable-collection-warna-8: rgba(65, 3, 4, 1);
+    --variable-collection-warna-hello: rgba(183, 135, 51, 1);
+    --variable-collection-kotak-kuis: rgba(118, 45, 17, 1);
+  }
+  
