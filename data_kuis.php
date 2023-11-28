@@ -1,3 +1,8 @@
+<?php
+include "koneksi.php";
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,7 +60,52 @@
       <button style="cursor: pointer;" onclick="window.location.href='insert.html'">BUAT</button>
     </section>
 
+    
     <div class="container">
+      <section class="table">
+        <table>
+          <tr class="table-headers table-row">
+            <th>NO</th>
+            <th>PERTANYAAN</th>
+            <th>PILIHAN PERTANYAAN</th>
+            <th>JAWABAN</th>
+            <th>TEMA</th>
+            <th>PETUNJUK</th>
+            <th>AKSI</th>
+          </tr>
+          <?php
+          $no = 1;
+          $sql = "select * from pertanyaan where tipe='kejujuran'";
+          $query = mysqli_query($conn,$sql);
+          while($row = mysqli_fetch_array($query)){
+            echo "<tr class='table-row'>
+            <td>$no</td>
+            <td>$row[pertanyaan]</td>";
+            $sql2 = "select * from jawaban where id_pertanyaan = '$row[id_pertanyaan]'";
+            $query2 = mysqli_query($conn,$sql2);
+            echo "<td>";
+            while($row2 = mysqli_fetch_array($query2)){
+              echo "$row2[pilihan]" . ". $row2[jawaban]"."<br>";
+            }
+            echo "</td>";
+            $sql3 = "select * from jawaban where id_pertanyaan = '$row[id_pertanyaan]' AND nilai='1'";
+            $query3 = mysqli_query($conn,$sql3);
+            $row3 = mysqli_fetch_array($query3);
+            echo "<td>$row3[pilihan]. $row3[jawaban]</td>";
+            echo "<td>$row[tipe]</td>
+            <td>$row[petunjuk]</td>
+            <td>
+              <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
+              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' id='trash' />
+            </td>
+          </tr>";
+          $no++;
+          }
+          ?>
+        </table>
+      </div>
+    </section>
+    <!-- <div class="container">
       <section class="table">
         <div class="table-headers table-row">
           <div>NO</div>
@@ -145,7 +195,7 @@
           </div>
         </div>
       </section>
-    </div>
+    </div> -->
 
     <footer class="footer">
       <div class="container">
