@@ -35,7 +35,7 @@ if(!isset($_SESSION['id'])){
                 <div class="group">
                 <div class="overlap-group" onclick="window.location.href='homepage.php'"><div class="text-wrapper">HOME</div></div>
                 <div class="text-wrapper-3" onclick="window.location.href='kategori.php'">KUIS</div>
-                <div class="text-wrapper-2" onclick="window.location.href='#'">ABOUT US</div>
+                <div class="text-wrapper-2" onclick="window.location.href='aboutus.php'">ABOUT US</div>
                 </div>
                 <img class="image" src="assets/img/image 2.png" />
                 <img class="profil-pino" onclick="window.location.href='profil.php'" src="assets/img/profil pino.png" />
@@ -91,7 +91,7 @@ if(!isset($_SESSION['id'])){
                 <div class="group">
                 <div class="overlap-group" onclick="window.location.href='homepage.php'"><div class="text-wrapper">HOME</div></div>
                 <div class="text-wrapper-3" onclick="window.location.href='kategori.php'">UJI</div>
-                <div class="text-wrapper-2" onclick="window.location.href='#'">ABOUT US</div>
+                <div class="text-wrapper-2" onclick="window.location.href='aboutus.php'">ABOUT US</div>
                 </div>
                 <img class="image" src="assets/img/image 2.png" />
                 <img class="profil-gepeto" onclick="window.location.href='profil.php'" src="assets/img/gepetoprofil.png" />
