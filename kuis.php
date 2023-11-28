@@ -252,8 +252,6 @@ $tema = $_GET['tema'];
         <button type="submit" name="selesai" class="end" >SELESAI</button>
         </form>
       <?php
-    } else{
-      header('Location: kategori.php');
     }
     ?>
 

@@ -1,6 +1,17 @@
 <?php
 include "koneksi.php";
 session_start();
+
+if(!isset($_SESSION['id'])){
+  header('Location: login.php');
+  exit();
+}
+
+if($_SESSION['role']=='pinocchio'){
+  header('Location: homepage.php');
+  exit();
+}
+$tema = $_GET['tema'];
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +40,7 @@ session_start();
       <img src="assets/img/image 2.png" alt="Pinokio Logo" />
       <div class="navbar-right">
         <span onclick="window.location.href='homepage.php'">HOME</span>
-        <span onclick="window.location.href='data_kuis.php'">UJI</span>
+        <span onclick="window.location.href='kategori.php'">UJI</span>
         <span onclick="window.location.href='#'">ABOUT US</span>
         <img src="assets/img/gepetoprofil.png" onclick="window.location.href='profil.php'" style="cursor: pointer;" alt="Profile Pino" />
       </div>
@@ -60,8 +71,10 @@ session_start();
       <button style="cursor: pointer;" onclick="window.location.href='insert.html'">BUAT</button>
     </section>
 
-    
-    <div class="container">
+    <?php
+    if($tema=='kejujuran'){
+      ?>
+      <div class="container">
       <section class="table">
         <table>
           <tr class="table-headers table-row">
@@ -103,8 +116,110 @@ session_start();
           }
           ?>
         </table>
+      </section>
       </div>
-    </section>
+      <?php
+    } elseif($tema=='kebaikan'){
+      ?>
+      <div class="container">
+      <section class="table">
+        <table>
+          <tr class="table-headers table-row">
+            <th>NO</th>
+            <th>PERTANYAAN</th>
+            <th>PILIHAN PERTANYAAN</th>
+            <th>JAWABAN</th>
+            <th>TEMA</th>
+            <th>PETUNJUK</th>
+            <th>AKSI</th>
+          </tr>
+          <?php
+          $no = 1;
+          $sql = "select * from pertanyaan where tipe='kebaikan'";
+          $query = mysqli_query($conn,$sql);
+          while($row = mysqli_fetch_array($query)){
+            echo "<tr class='table-row'>
+            <td>$no</td>
+            <td>$row[pertanyaan]</td>";
+            $sql2 = "select * from jawaban where id_pertanyaan = '$row[id_pertanyaan]'";
+            $query2 = mysqli_query($conn,$sql2);
+            echo "<td>";
+            while($row2 = mysqli_fetch_array($query2)){
+              echo "$row2[pilihan]" . ". $row2[jawaban]"."<br>";
+            }
+            echo "</td>";
+            $sql3 = "select * from jawaban where id_pertanyaan = '$row[id_pertanyaan]' AND nilai='1'";
+            $query3 = mysqli_query($conn,$sql3);
+            $row3 = mysqli_fetch_array($query3);
+            echo "<td>$row3[pilihan]. $row3[jawaban]</td>";
+            echo "<td>$row[tipe]</td>
+            <td>$row[petunjuk]</td>
+            <td>
+              <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
+              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' id='trash' />
+            </td>
+          </tr>";
+          $no++;
+          }
+          ?>
+        </table>
+      </section>
+      </div>
+      <?php
+    } elseif($tema=='tanggung_jawab'){
+      ?>
+      <div class="container">
+      <section class="table">
+        <table>
+          <tr class="table-headers table-row">
+            <th>NO</th>
+            <th>PERTANYAAN</th>
+            <th>PILIHAN PERTANYAAN</th>
+            <th>JAWABAN</th>
+            <th>TEMA</th>
+            <th>PETUNJUK</th>
+            <th>AKSI</th>
+          </tr>
+          <?php
+          $no = 1;
+          $sql = "select * from pertanyaan where tipe='tanggung_jawab'";
+          $query = mysqli_query($conn,$sql);
+          while($row = mysqli_fetch_array($query)){
+            echo "<tr class='table-row'>
+            <td>$no</td>
+            <td>$row[pertanyaan]</td>";
+            $sql2 = "select * from jawaban where id_pertanyaan = '$row[id_pertanyaan]'";
+            $query2 = mysqli_query($conn,$sql2);
+            echo "<td>";
+            while($row2 = mysqli_fetch_array($query2)){
+              echo "$row2[pilihan]" . ". $row2[jawaban]"."<br>";
+            }
+            echo "</td>";
+            $sql3 = "select * from jawaban where id_pertanyaan = '$row[id_pertanyaan]' AND nilai='1'";
+            $query3 = mysqli_query($conn,$sql3);
+            $row3 = mysqli_fetch_array($query3);
+            echo "<td>$row3[pilihan]. $row3[jawaban]</td>";
+            echo "<td>$row[tipe]</td>
+            <td>$row[petunjuk]</td>
+            <td>
+              <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
+              <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' id='trash' />
+            </td>
+          </tr>";
+          $no++;
+          }
+          ?>
+        </table>
+      </section>
+      </div>
+      <?php
+    } else{
+      header('Location: kategori.php');
+      exit();
+    }
+    ?>
+    
+    
     <!-- <div class="container">
       <section class="table">
         <div class="table-headers table-row">

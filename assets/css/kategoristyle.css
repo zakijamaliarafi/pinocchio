@@ -578,3 +578,13 @@ body {
     --variable-collection-warna-hello: rgba(183, 135, 51, 1);
     --variable-collection-kotak-kuis: rgba(118, 45, 17, 1);
   }
+
+  .kuis .profil-gepeto {
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    top: 1px;
+    left: 1px;
+    object-fit: cover;
+    cursor: pointer;
+  }

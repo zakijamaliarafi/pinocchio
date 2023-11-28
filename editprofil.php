@@ -2,6 +2,16 @@
 include "koneksi.php";
 session_start();
 
+if(!isset($_SESSION['id'])){
+    header('Location: login.php');
+    exit();
+}
+
+if($_SESSION['role']=='geppetto'){
+    header('Location: profil.php');
+    exit();
+}
+
 $sql = "SELECT * from user WHERE id_user='$_SESSION[id]'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);

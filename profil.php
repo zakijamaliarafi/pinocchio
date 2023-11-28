@@ -2,6 +2,11 @@
 include "koneksi.php";
 session_start();
 
+if(!isset($_SESSION['id'])){
+    header('Location: login.php');
+    exit();
+}
+
 $sql = "SELECT * from user WHERE id_user='$_SESSION[id]'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -18,7 +23,6 @@ $row = mysqli_fetch_assoc($result);
 </head>
 
 <body>
-    <form>
     <div class="container">
         <div class="gradient-background"></div>
         <img class="arrow-image" onclick="window.location.href='homepage.php'" src="assets/img/back kayu.png" />
@@ -41,17 +45,22 @@ $row = mysqli_fetch_assoc($result);
             <div class="input-box" style="top: 203px;">Bio </div>
             <div class="input-box" style="top: 101px;">Full Name</div>
         </div>
-        <div class="button1" onclick="window.location.href='editprofil.php'">
-            <div class="button1-inner"></div>
-            <div class="button1-text">Edit Profile</div>
-        </div>
+        <?php
+        if($_SESSION['role']=='pinocchio'){
+            ?>
+            <div class="button1" onclick="window.location.href='editprofil.php'">
+                <div class="button1-inner"></div>
+                <div class="button1-text">Edit Profile</div>
+            </div>
+            <?php
+        }
+        ?>
         <div class="button2" onclick="showLogoutPopup()">
             <div class="button2-inner"></div>
             <div class="button2-text">Logout</div>
         </div>
         <div class="profile-title">My <span style="color: #FDB50A;">Profile</span></div>
     </div>
-    </form>
 
     <div id="logoutPopup" class="logout-popup" style="display: none;">
         <div class="popup-content">
