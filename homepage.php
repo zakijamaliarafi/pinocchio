@@ -34,7 +34,7 @@ if(!isset($_SESSION['id'])){
             <div class="div">
                 <div class="group">
                 <div class="overlap-group" onclick="window.location.href='homepage.php'"><div class="text-wrapper">HOME</div></div>
-                <div class="text-wrapper-3" onclick="window.location.href='kategori.php'">QUIZ</div>
+                <div class="text-wrapper-3" onclick="window.location.href='kategori.php'">KUIS</div>
                 <div class="text-wrapper-2" onclick="window.location.href='#'">ABOUT US</div>
                 </div>
                 <img class="image" src="assets/img/image 2.png" />

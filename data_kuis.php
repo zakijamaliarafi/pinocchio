@@ -57,7 +57,7 @@ $tema = $_GET['tema'];
       </div>
     </dialog>
     <section class="container header" >
-      <h2 class="headings-pinokio">Data Quiz</h2>
+      <h2 class="headings-pinokio">Data Kuis</h2>
       <button style="cursor: pointer;" onclick="window.location.href='insert.php?tema=<?php echo $tema ?>'">BUAT</button>
     </section>
 

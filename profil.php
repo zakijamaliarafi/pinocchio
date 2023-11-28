@@ -43,7 +43,7 @@ $row = mysqli_fetch_assoc($result);
         <div class="input-container">
             <div class="input-box" style="top: 0px;">Username </div>
             <div class="input-box" style="top: 203px;">Bio </div>
-            <div class="input-box" style="top: 101px;">Full Name</div>
+            <div class="input-box" style="top: 101px;">Nama Lengkap</div>
         </div>
         <?php
         if($_SESSION['role']=='pinocchio'){
@@ -57,9 +57,9 @@ $row = mysqli_fetch_assoc($result);
         ?>
         <div class="button2" onclick="showLogoutPopup()">
             <div class="button2-inner"></div>
-            <div class="button2-text">Logout</div>
+            <div class="button2-text">Keluar</div>
         </div>
-        <div class="profile-title">My <span style="color: #FDB50A;">Profile</span></div>
+        <div class="profile-title"><span style="color: #FDB50A;">Profile</span>ku</div>
     </div>
 
     <div id="logoutPopup" class="logout-popup" style="display: none;">

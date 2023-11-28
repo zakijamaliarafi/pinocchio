@@ -133,7 +133,7 @@ body {
 }
 
 .input-box {
-    width: 218px;
+    width: 250px;
     height: 45px;
     position: absolute;
     color: white;
@@ -200,7 +200,7 @@ body {
 }
 
 .profile-title {
-    left: 836px;
+    left: 850px;
     top: 259px;
     position: absolute;
     color: white;

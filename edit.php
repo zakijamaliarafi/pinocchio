@@ -79,7 +79,7 @@ if(isset($_POST['edit'])){
     </nav>
 
     <section class="container header">
-      <h2 class="headings-pinokio">Edit Quiz</h2>
+      <h2 class="headings-pinokio">Edit Kuis</h2>
     </section>
 
     <div class="container">
