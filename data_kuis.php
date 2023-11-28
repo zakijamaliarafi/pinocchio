@@ -98,7 +98,7 @@ $tema = $_GET['tema'];
             echo "<td>$row[tipe]</td>
             <td>$row[petunjuk]</td>
             <td>
-              <img src='assets/img/check.png' alt='Check' style='cursor: pointer' id='check' />
+              <img src='assets/img/check.png' alt='Check' style='cursor: pointer' onclick='window.location.href=\"edit.php?id=$row[id_pertanyaan]\"' />
               <img src='assets/img/trash.png' alt='Trash' style='cursor: pointer' onclick='setIdHapus($row[id_pertanyaan],\"$row[tipe]\")' />
               
             </td>
