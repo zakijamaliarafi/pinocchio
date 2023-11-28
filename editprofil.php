@@ -48,16 +48,16 @@ $row = mysqli_fetch_assoc($result);
         <div class="input-container">
             <div class="input-box" style="top: 0px;">Username </div>
             <div class="input-box" style="top: 203px;">Bio </div>
-            <div class="input-box" style="top: 101px;">Full Name</div>
+            <div class="input-box" style="top: 101px;">Nama Lengkap</div>
         </div>
         <div class="button1">
             <div class="button1-inner">
-                <div><input type="submit" name="edit" class="button1-text" value="Save"></div>
+                <div><input type="submit" name="edit" class="button1-text" value="Simpan"></div>
             </div>
         </div>
         <div class="button2" onclick="window.location.href='profil.php'">
             <div class="button2-inner"></div>
-            <div class="button2-text">Cancel</div>
+            <div class="button2-text">Batal</div>
         </div>
         <div class="profile-title">Edit <span style="color: #FDB50A;">Profile</span></div>
     </div>

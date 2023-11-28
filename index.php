@@ -48,7 +48,7 @@ if(isset($_SESSION['id'])){
         tanggung jawab diuji dalam serangkaian game kuis seru yang mendidik dan
         menyenangkan!
       </p>
-      <button class="hero-cta" onclick="window.location.href='login.php'">LEARN MORE</button>
+      <button class="hero-cta" onclick="window.location.href='login.php'">COBALAH</button>
     </section>
 
     <section class="story">

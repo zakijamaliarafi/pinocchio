@@ -220,11 +220,11 @@ body {
 }
 
 .looking-for-text-inner {
-    padding-left: 35px;
+    padding-left: 5px;
     left: 73px;
     position: relative;
     color: white;
-    font-size: 50px;
+    font-size: 34px;
     font-weight: 700;
     word-wrap: break-word;
 }

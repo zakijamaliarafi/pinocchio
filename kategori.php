@@ -23,7 +23,7 @@ if(!isset($_SESSION['id'])){
       <div class="kuis">
         <div class="div">
           <div class="group">
-            <div class="overlap-group"><div class="text-wrapper" onclick="window.location.href='kategori.php'">QUIZ</div></div>
+            <div class="overlap-group"><div class="text-wrapper" onclick="window.location.href='kategori.php'">KUIS</div></div>
             <div class="text-wrapper-2" onclick="window.location.href='homepage.php'">HOME</div>
             <div class="text-wrapper-3" onclick="window.location.href='#'">ABOUT US</div>
           </div>

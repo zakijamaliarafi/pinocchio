@@ -42,7 +42,7 @@ $tema = $_GET['tema'];
       <img src="assets/img/image 2.png" alt="Pinokio Logo" />
       <div class="navbar-right">
         <span id="nav-link">HOME</span>
-        <span class="active" id="nav-link">QUIZ</span>
+        <span class="active" id="nav-link">KUIS</span>
         <span id="nav-link">ABOUT US</span>
         <img src="assets/img/profil pino.png" alt="Profile Pino" style="cursor: pointer;" id="nav-link" />
       </div>
@@ -259,7 +259,7 @@ $tema = $_GET['tema'];
     <dialog id="myModalResult" class="modal">
       <div class="modal-content-result">
         <div class="modal-text">
-          <h1>HASIL QUIZ</h1>
+          <h1>HASIL KUIS</h1>
           <div>
             <img src="assets/img/benar.png" alt="benar" />
             <span>benar : <?php echo $benar ?></span>

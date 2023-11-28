@@ -44,7 +44,7 @@ if(isset($_SESSION['id'])){
         <div class="section">
             <div class="field username">Username</div>
             <div class="field password">Password</div>
-            <div class="field confirm-password">Confirm Password</div>
+            <div class="field confirm-password">Konfirmasi Password</div>
         </div>
         <div class="signup-button">
             <div class="signup-button-inner">
@@ -52,7 +52,7 @@ if(isset($_SESSION['id'])){
             </div>
         </div>
         <div class="looking-for-text">
-            <div class="looking-for-text-inner">Looking for <span class="new-member-text">New</span> Member</div>
+            <div class="looking-for-text-inner">Jadilah <span class="new-member-text">Bagian</span> dari <span class="new-member-text">Komunitas </span>Kami</div>
         </div>
         <img class="image4" onclick="window.location.href='index.php'" src="assets/img/back kayu.png" />
     </div>

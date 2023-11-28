@@ -49,7 +49,7 @@ if(isset($_SESSION['id'])){
             </div>
         </div>
         <div class="looking-for-text">
-            <div class="looking-for-text-inner">Welcome <span class="everyone-text">Everyone</span></div>
+            <div class="looking-for-text-inner">Mulailah Sebuah <span class="everyone-text">Petualangan</span></div>
         </div>
         <img class="image4" onclick="window.location.href='index.php'" src="assets/img/back kayu.png" />
     </div>

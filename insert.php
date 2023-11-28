@@ -97,7 +97,7 @@ $tema = $_GET['tema'];
         </div>
         <div class="button-action">
           <button class="batal">BATAL</button>
-          <button type="submit" name="insert" class="insert">INSERT</button>
+          <button type="submit" name="insert" class="insert">SIMPAN</button>
         </div>
       </section>
       </form>
